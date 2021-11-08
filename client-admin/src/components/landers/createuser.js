@@ -165,16 +165,6 @@ class Createuser extends React.Component {
             {this.props.pending ? 'Creating Account...' : 'Create Account'}
           </Button>
         </form>
-        <Box sx={{ mb: [4] }}>
-          Already have an account?{' '}
-          <Link
-            tabIndex="6"
-            to={'/signin' + this.getDest()}
-            data-section="signup-select">
-            Sign in
-          </Link>
-        </Box>
-
         <Button
           sx={{ my: [2] }}
           id="signupFacebookButton"
@@ -186,7 +176,7 @@ class Createuser extends React.Component {
           user, you will be registered and you agree to the pol.is terms and
           privacy policy
         </Text>
-
+        <p>&nbsp;</p>
         <form sx={{ mb: [4] }}>
           <Box sx={{ my: [2] }}>
             <input
@@ -220,30 +210,31 @@ class Createuser extends React.Component {
               ref={(c) => (this.password = c)}
               placeholder="password"
               type="password"
+              autocomplete="on"
             />
           </Box>
           {this.maybeErrorMessage()}
-
-          <Box>
-            I agree to the{' '}
-            <a href="https://pol.is/tos" tabIndex="110">
-              pol.is terms
-            </a>{' '}
-            and{' '}
-            <a href="https://pol.is/privacy" tabIndex="111">
-              {' '}
-              privacy agreement
-            </a>
-            .
-          </Box>
-
           <Button
             sx={{ my: [3] }}
             id="createLdapUserButton"
             onClick={this.handleLdapLoginClicked.bind(this)}>
             {this.props.pending ? 'Signup with Ldap Account...' : 'Signup with Ldap Account'}
           </Button>
+          <Text>
+            If you click &apos;Sign in with LDAP&apos; and are not a pol.is
+            user, you will be registered and you agree to the pol.is terms and
+            privacy policy
+          </Text>
         </form>
+        <Box sx={{ mb: [4] }}>
+          Already have an account?{' '}
+          <Link
+            tabIndex="6"
+            to={'/signin' + this.getDest()}
+            data-section="signup-select">
+            Sign in
+          </Link>
+        </Box>
 
       </Box>
 
