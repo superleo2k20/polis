@@ -36,7 +36,6 @@ class Createuser extends React.Component {
     e.preventDefault()
     const attrs = {
       hname: this.hname.value,
-      email: 'no_ldap_mail_yet',
       password: this.password.value,
       gatekeeperTosPrivacy: true
     }
