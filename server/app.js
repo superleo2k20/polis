@@ -1126,8 +1126,11 @@ helpersInitialized.then(function (o) {
       else {
         req.logIn(user, (err) => {
           if (err) throw err;
-          res.send("Successfully Authenticated");
+          // res.send("Successfully Authenticated");
+          res.send(user.mail);
           console.log(req.user);
+          console.log ("MDV LDAPLOGIN USER MAIL",JSON.stringify(user.mail, null, 4))
+          console.log ("MDV LDAPLOGIN USER CN",JSON.stringify(user.cn, null, 4))
         });
       }
     })(req, res, next);

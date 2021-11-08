@@ -300,29 +300,13 @@ export const doCreateUser = (attrs, dest) => {
 // to reinit postgres db
 // docker-compose down --volumes    
 export const doCreateLdapUser = (attrs, dest) => {
-  console.log("MDV IN doCreateLdapUser, ATTRS",attrs)
+  console.log("MDV IN doCreateLdapUser, ATTRS", attrs)
   return (dispatch) => {
 
-    console.log("MDV CALLING myLogin USER",attrs.user)
-    myloginCheck(dispatch, attrs,dest)
+    console.log("MDV CALLING myLogin USER", attrs.user)
+    myloginCheck(dispatch, attrs, dest)
     console.log("MDV RETURNED FROM CALLIG myLogin")
 
-    // if (ldapLogged) {
-
-    //   console.log("MDV doCreateLdapUser CREATING USER..")
-    //   dispatch(createUserInitiated())
-    //   return createUserPost(attrs).then(
-    //     () => {
-    //       setTimeout(() => {
-    //         // Force page to load so we can be sure the password is cleared from memory
-    //         // delay a bit so the cookie has time to set
-    //         window.location = dest || ''
-    //       }, 3000)
-    //     },
-    //     (err) => dispatch(createUserError(err))
-    //   )
-
-    // }
   }
 }
 
@@ -662,12 +646,12 @@ const callFacebookLoginAPI = (dest, dispatch, optionalPassword) => {
 let cancelToken
 
 
-const myloginCheck = (dispatch, attrs,dest) => {
+const myloginCheck = (dispatch, attrs, dest) => {
 
   //Save the cancel token for the current request
   cancelToken = Axios.CancelToken.source()
 
-  console.log("MDV CALLING Axios.. ATTRS",attrs);
+  console.log("MDV CALLING Axios.. ATTRS", attrs);
 
   Axios({
     method: "POST",
@@ -681,7 +665,11 @@ const myloginCheck = (dispatch, attrs,dest) => {
     // cancelToken: cancelToken.token
 
   }).then((respose) => {
-    console.log("MDV Axios got AUTHORIZED!", respose);
+    // middleware replies with user email
+    console.log("MDV Axios got AUTHORIZED, LDAP email is: ", respose.data);
+
+    // fills in the email coming from ldap server for the user
+    attrs.email = respose.data
 
     console.log("MDV myloginCheck CREATING USER..")
     dispatch(createUserInitiated())
@@ -722,6 +710,9 @@ const mylogin = (dispatch, attrs) => {
     console.log("MDV AUTHORIZED!", respose);
     dispatch(ldapSigninSuccessful())
     // alert('MDV: LDAP LOGGED SUCCESSFUL')
+
+    // fills in the email coming from ldap server for the user
+    attrs.email = respose.data
 
     const new_attrs = {
       hname: attrs.user,

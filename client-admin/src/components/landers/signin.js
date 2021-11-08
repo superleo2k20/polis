@@ -57,8 +57,7 @@ class SignIn extends React.Component {
     e.preventDefault()
     const attrs = {
       user: this.user.value,
-      password: this.password.value,
-      email: this.email.value,
+      password: this.password.value
     }
 
     let dest = this.getDest()
@@ -186,21 +185,6 @@ class SignIn extends React.Component {
               ref={(c) => (this.password = c)}
               placeholder="password"
               type="password"
-            />
-            <input
-              sx={{
-                fontFamily: 'body',
-                fontSize: [2],
-                width: '35em',
-                borderRadius: 2,
-                padding: [2],
-                border: '1px solid',
-                borderColor: 'mediumGray'
-              }}
-              id="ldapEmailInput"
-              ref={(c) => (this.email = c)}
-              placeholder="email"
-              type="email"
             />
           <Button
             id="ldapSigninButton"

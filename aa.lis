@@ -1,0 +1,1478 @@
+Attaching to polis-client-report, polis-client-admin, polis-client-participation, polis-postgres, polis_maildev_1
+[35mpolis-postgres          |[0m The files belonging to this database system will be owned by user "postgres".
+[35mpolis-postgres          |[0m This user must also own the server process.
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m The database cluster will be initialized with locale "en_US.utf8".
+[35mpolis-postgres          |[0m The default database encoding has accordingly been set to "UTF8".
+[35mpolis-postgres          |[0m The default text search configuration will be set to "english".
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m Data page checksums are disabled.
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m fixing permissions on existing directory /var/lib/postgresql/data ... ok
+[35mpolis-postgres          |[0m creating subdirectories ... ok
+[35mpolis-postgres          |[0m selecting dynamic shared memory implementation ... posix
+[35mpolis-postgres          |[0m selecting default max_connections ... 100
+[35mpolis-postgres          |[0m selecting default shared_buffers ... 128MB
+[35mpolis-postgres          |[0m selecting default time zone ... UTC
+[35mpolis-postgres          |[0m creating configuration files ... ok
+[35mpolis-postgres          |[0m running bootstrap script ... ok
+[35mpolis-postgres          |[0m sh: locale: not found
+[35mpolis-postgres          |[0m 2021-11-08 17:06:01.054 UTC [31] WARNING:  no usable system locales were found
+[35mpolis-postgres          |[0m performing post-bootstrap initialization ... ok
+[35mpolis-postgres          |[0m syncing data to disk ... ok
+[35mpolis-postgres          |[0m initdb: warning: enabling "trust" authentication for local connections
+[35mpolis-postgres          |[0m You can change this by editing pg_hba.conf or using the option -A, or
+[35mpolis-postgres          |[0m --auth-local and --auth-host, the next time you run initdb.
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m Success. You can now start the database server using:
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m     pg_ctl -D /var/lib/postgresql/data -l logfile start
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m waiting for server to start....2021-11-08 17:06:02.170 UTC [37] LOG:  starting PostgreSQL 13.4 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20210424) 10.3.1 20210424, 64-bit
+[35mpolis-postgres          |[0m 2021-11-08 17:06:02.176 UTC [37] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[35mpolis-postgres          |[0m 2021-11-08 17:06:02.181 UTC [38] LOG:  database system was shut down at 2021-11-08 17:06:01 UTC
+[35mpolis-postgres          |[0m 2021-11-08 17:06:02.184 UTC [37] LOG:  database system is ready to accept connections
+[35mpolis-postgres          |[0m  done
+[35mpolis-postgres          |[0m server started
+[35mpolis-postgres          |[0m CREATE DATABASE
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/000000_initial.sql
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE TRIGGER
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE TRIGGER
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE INDEX
+[35mpolis-postgres          |[0m CREATE RULE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE FUNCTION
+[35mpolis-postgres          |[0m CREATE TRIGGER
+[35mpolis-postgres          |[0m CREATE TRIGGER
+[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m CREATE TABLE
+[36mpolis-client-admin exited with code 0
+[0m[35mpolis-postgres          |[0m CREATE TABLE
+[32mpolis-client-report exited with code 0
+[0m[33mpolis-client-participation exited with code 0
+[0m[35mpolis-postgres          |[0m CREATE TABLE
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/000001_update_pwreset_table.sql
+[35mpolis-postgres          |[0m ALTER TABLE
+[35mpolis-postgres          |[0m ALTER TABLE
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m waiting for server to shut down....2021-11-08 17:06:03.208 UTC [37] LOG:  received fast shutdown request
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.210 UTC [37] LOG:  aborting any active transactions
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.211 UTC [37] LOG:  background worker "logical replication launcher" (PID 44) exited with exit code 1
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.213 UTC [39] LOG:  shutting down
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.254 UTC [37] LOG:  database system is shut down
+[35mpolis-postgres          |[0m  done
+[35mpolis-postgres          |[0m server stopped
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m PostgreSQL init process complete; ready for start up.
+[35mpolis-postgres          |[0m 
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.327 UTC [1] LOG:  starting PostgreSQL 13.4 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20210424) 10.3.1 20210424, 64-bit
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.327 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.327 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.331 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.337 UTC [56] LOG:  database system was shut down at 2021-11-08 17:06:03 UTC
+[35mpolis-postgres          |[0m 2021-11-08 17:06:03.344 UTC [1] LOG:  database system is ready to accept connections
+[34mmaildev_1               |[0m MailDev webapp running at http://0.0.0.0:80
+[34mmaildev_1               |[0m MailDev SMTP Server running at 0.0.0.0:25
+[36;1mpolis-math              |[0m                                                            
+[36;1mpolis-math              |[0m XXXXXXXXXXXXXXXXXX REBOOTING MATH WORKER XXXXXXXXXXXXXXXXXX
+[36;1mpolis-math              |[0m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+[36;1mpolis-math              |[0m                                                            
+[33;1mpolis-file-server       |[0m polisFileServer listening on port 8080
+[36;1mpolis-math              |[0m Downloading: org/clojure/clojure/maven-metadata.xml from clojars
+[36;1mpolis-math              |[0m Downloading: org/clojure/clojure/maven-metadata.xml from central
+[36;1mpolis-math              |[0m Downloading: com/amazonaws/aws-java-sdk-cloudwatch/maven-metadata.xml from central
+[36;1mpolis-math              |[0m Downloading: com/amazonaws/aws-java-sdk-dynamodb/maven-metadata.xml from central
+[36;1mpolis-math              |[0m Downloading: com/amazonaws/aws-java-sdk-kinesis/maven-metadata.xml from central
+[36;1mpolis-math              |[0m Downloading: com/amazonaws/amazon-kinesis-client/maven-metadata.xml from central
+[32;1mpolis-server            |[0m init 1
+[32;1mpolis-server            |[0m end initializePolisHelpers
+[32;1mpolis-server            |[0m (node:1) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+[32;1mpolis-server            |[0m (Use `node --trace-warnings ...` to show where the warning was created)
+[32;1mpolis-server            |[0m begin route config
+[32;1mpolis-server            |[0m MDV APP MIDDLEWARE INITIALIZING
+[32;1mpolis-server            |[0m Mon, 08 Nov 2021 17:06:12 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+[32;1mpolis-server            |[0m Mon, 08 Nov 2021 17:06:12 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[32;1mpolis-server            |[0m info started on port 5000
+[32;1mpolis-server            |[0m info Akismet: Unable to verify API key.
+[35;1mpolis-nginx-proxy       |[0m /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+[35;1mpolis-nginx-proxy       |[0m /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+[35;1mpolis-nginx-proxy       |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+[35;1mpolis-nginx-proxy       |[0m 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+[35;1mpolis-nginx-proxy       |[0m 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+[35;1mpolis-nginx-proxy       |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+[35;1mpolis-nginx-proxy       |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+[35;1mpolis-nginx-proxy       |[0m /docker-entrypoint.sh: Configuration complete; ready for start up
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: using the "epoll" event method
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: nginx/1.21.3
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424) 
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: start worker processes
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: start worker process 32
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: start worker process 33
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: start worker process 34
+[35;1mpolis-nginx-proxy       |[0m 2021/11/08 17:06:14 [notice] 1#1: start worker process 35
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'content-length': '0',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   accept: 'text/plain, */*; q=0.01',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   origin: 'http://localhost',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/signout',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk; token2=Yp5WRtBALcObtnoAtVlf; uid2=1; e=1; uc=1636391045593'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /api/v3/auth/deregister {}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'content-length': '0',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   accept: 'text/plain, */*; q=0.01',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   origin: 'http://localhost',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/signout',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk; token2=Yp5WRtBALcObtnoAtVlf; uid2=1; e=1; uc=1636391045593'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m MDV CALLED handle_POST_auth_deregister
+[32;1mpolis-server            |[0m info after clear res set-cookie: ["token2=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT","uid2=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT","e=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT","uc=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"]
+[32;1mpolis-server            |[0m (node:1) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:16 +0000] "POST /api/v3/auth/deregister HTTP/1.1" 200 5 "http://localhost/signout" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'upgrade-insecure-requests': '1',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'navigate',
+[32;1mpolis-server            |[0m   'sec-fetch-user': '?1',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'document',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/signout',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /home {}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'upgrade-insecure-requests': '1',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'navigate',
+[32;1mpolis-server            |[0m   'sec-fetch-user': '?1',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'document',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/signout',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info fetch file from http://file-server:8080/index_admin.html
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:17 +0000] "GET /home HTTP/1.1" 200 1241 "http://localhost/signout" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'content-type': 'application/json; charset=utf-8',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/javascript, */*; q=0.01',
+[32;1mpolis-server            |[0m   'cache-control': 'max-age=0',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/home',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk',
+[32;1mpolis-server            |[0m   'if-none-match': 'W/"126-5zafxnQXXNGlrygYYysMXA"'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /api/v3/users {}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'content-type': 'application/json; charset=utf-8',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/javascript, */*; q=0.01',
+[32;1mpolis-server            |[0m   'cache-control': 'max-age=0',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/home',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk',
+[32;1mpolis-server            |[0m   'if-none-match': 'W/"126-5zafxnQXXNGlrygYYysMXA"'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m polis_error_auth_needed polis_err undefined
+[32;1mpolis-server            |[0m polis_error_auth_needed
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:18 +0000] "GET /api/v3/users?errIfNoAuth=true HTTP/1.1" 401 54 "http://localhost/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[32;1mpolis-server            |[0m info heapUsed: 30992528 heapTotal: 47714304 rss: 84684800
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'upgrade-insecure-requests': '1',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'navigate',
+[32;1mpolis-server            |[0m   'sec-fetch-user': '?1',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'document',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/home',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /createuser {}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'upgrade-insecure-requests': '1',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'navigate',
+[32;1mpolis-server            |[0m   'sec-fetch-user': '?1',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'document',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/home',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info fetch file from http://file-server:8080/index_admin.html
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:27 +0000] "GET /createuser HTTP/1.1" 200 1241 "http://localhost/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'content-type': 'application/json; charset=utf-8',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/javascript, */*; q=0.01',
+[32;1mpolis-server            |[0m   'cache-control': 'max-age=0',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk',
+[32;1mpolis-server            |[0m   'if-none-match': 'W/"126-5zafxnQXXNGlrygYYysMXA"'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /api/v3/users {}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'content-type': 'application/json; charset=utf-8',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/javascript, */*; q=0.01',
+[32;1mpolis-server            |[0m   'cache-control': 'max-age=0',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk',
+[32;1mpolis-server            |[0m   'if-none-match': 'W/"126-5zafxnQXXNGlrygYYysMXA"'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m polis_error_auth_needed polis_err undefined
+[32;1mpolis-server            |[0m polis_error_auth_needed
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:27 +0000] "GET /api/v3/users?errIfNoAuth=true HTTP/1.1" 401 54 "http://localhost/createuser" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[32;1mpolis-server            |[0m info heapUsed: 28803200 heapTotal: 31752192 rss: 84422656
+[36;1mpolis-math              |[0m SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[36;1mpolis-math              |[0m SLF4J: Defaulting to no-operation (NOP) logger implementation
+[36;1mpolis-math              |[0m SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'content-length': '42',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/plain, */*',
+[32;1mpolis-server            |[0m   'content-type': 'application/json',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   origin: 'http://localhost',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /ldaplogin {"username":"gauss","password":"some_password"}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m { username: 'gauss', password: 'password' }
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'content-length': '42',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/plain, */*',
+[32;1mpolis-server            |[0m   'content-type': 'application/json',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   origin: 'http://localhost',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m MDV ldalogin started
+[32;1mpolis-server            |[0m MDV ldalogin req <ref *2> IncomingMessage {
+[32;1mpolis-server            |[0m   _readableState: ReadableState {
+[32;1mpolis-server            |[0m     objectMode: false,
+[32;1mpolis-server            |[0m     highWaterMark: 16384,
+[32;1mpolis-server            |[0m     buffer: BufferList { head: null, tail: null, length: 0 },
+[32;1mpolis-server            |[0m     length: 0,
+[32;1mpolis-server            |[0m     pipes: [],
+[32;1mpolis-server            |[0m     flowing: true,
+[32;1mpolis-server            |[0m     ended: true,
+[32;1mpolis-server            |[0m     endEmitted: true,
+[32;1mpolis-server            |[0m     reading: false,
+[32;1mpolis-server            |[0m     sync: false,
+[32;1mpolis-server            |[0m     needReadable: false,
+[32;1mpolis-server            |[0m     emittedReadable: false,
+[32;1mpolis-server            |[0m     readableListening: false,
+[32;1mpolis-server            |[0m     resumeScheduled: false,
+[32;1mpolis-server            |[0m     errorEmitted: false,
+[32;1mpolis-server            |[0m     emitClose: true,
+[32;1mpolis-server            |[0m     autoDestroy: false,
+[32;1mpolis-server            |[0m     destroyed: false,
+[32;1mpolis-server            |[0m     errored: null,
+[32;1mpolis-server            |[0m     closed: false,
+[32;1mpolis-server            |[0m     closeEmitted: false,
+[32;1mpolis-server            |[0m     defaultEncoding: 'utf8',
+[32;1mpolis-server            |[0m     awaitDrainWriters: null,
+[32;1mpolis-server            |[0m     multiAwaitDrain: false,
+[32;1mpolis-server            |[0m     readingMore: false,
+[32;1mpolis-server            |[0m     decoder: null,
+[32;1mpolis-server            |[0m     encoding: null,
+[32;1mpolis-server            |[0m     [Symbol(kPaused)]: false
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   _events: [Object: null prototype] { end: [Function: clearRequestTimeout] },
+[32;1mpolis-server            |[0m   _eventsCount: 1,
+[32;1mpolis-server            |[0m   _maxListeners: undefined,
+[32;1mpolis-server            |[0m   socket: <ref *1> Socket {
+[32;1mpolis-server            |[0m     connecting: false,
+[32;1mpolis-server            |[0m     _hadError: false,
+[32;1mpolis-server            |[0m     _parent: null,
+[32;1mpolis-server            |[0m     _host: null,
+[32;1mpolis-server            |[0m     _readableState: ReadableState {
+[32;1mpolis-server            |[0m       objectMode: false,
+[32;1mpolis-server            |[0m       highWaterMark: 16384,
+[32;1mpolis-server            |[0m       buffer: BufferList { head: null, tail: null, length: 0 },
+[32;1mpolis-server            |[0m       length: 0,
+[32;1mpolis-server            |[0m       pipes: [],
+[32;1mpolis-server            |[0m       flowing: true,
+[32;1mpolis-server            |[0m       ended: false,
+[32;1mpolis-server            |[0m       endEmitted: false,
+[32;1mpolis-server            |[0m       reading: true,
+[32;1mpolis-server            |[0m       sync: false,
+[32;1mpolis-server            |[0m       needReadable: true,
+[32;1mpolis-server            |[0m       emittedReadable: false,
+[32;1mpolis-server            |[0m       readableListening: false,
+[32;1mpolis-server            |[0m       resumeScheduled: false,
+[32;1mpolis-server            |[0m       errorEmitted: false,
+[32;1mpolis-server            |[0m       emitClose: false,
+[32;1mpolis-server            |[0m       autoDestroy: false,
+[32;1mpolis-server            |[0m       destroyed: false,
+[32;1mpolis-server            |[0m       errored: null,
+[32;1mpolis-server            |[0m       closed: false,
+[32;1mpolis-server            |[0m       closeEmitted: false,
+[32;1mpolis-server            |[0m       defaultEncoding: 'utf8',
+[32;1mpolis-server            |[0m       awaitDrainWriters: null,
+[32;1mpolis-server            |[0m       multiAwaitDrain: false,
+[32;1mpolis-server            |[0m       readingMore: false,
+[32;1mpolis-server            |[0m       decoder: null,
+[32;1mpolis-server            |[0m       encoding: null,
+[32;1mpolis-server            |[0m       [Symbol(kPaused)]: false
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     _events: [Object: null prototype] {
+[32;1mpolis-server            |[0m       end: [Array],
+[32;1mpolis-server            |[0m       timeout: [Function: socketOnTimeout],
+[32;1mpolis-server            |[0m       data: [Function: bound socketOnData],
+[32;1mpolis-server            |[0m       error: [Function: socketOnError],
+[32;1mpolis-server            |[0m       close: [Array],
+[32;1mpolis-server            |[0m       drain: [Function: bound socketOnDrain],
+[32;1mpolis-server            |[0m       resume: [Function: onSocketResume],
+[32;1mpolis-server            |[0m       pause: [Function: onSocketPause]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     _eventsCount: 8,
+[32;1mpolis-server            |[0m     _maxListeners: undefined,
+[32;1mpolis-server            |[0m     _writableState: WritableState {
+[32;1mpolis-server            |[0m       objectMode: false,
+[32;1mpolis-server            |[0m       highWaterMark: 16384,
+[32;1mpolis-server            |[0m       finalCalled: false,
+[32;1mpolis-server            |[0m       needDrain: false,
+[32;1mpolis-server            |[0m       ending: false,
+[32;1mpolis-server            |[0m       ended: false,
+[32;1mpolis-server            |[0m       finished: false,
+[32;1mpolis-server            |[0m       destroyed: false,
+[32;1mpolis-server            |[0m       decodeStrings: false,
+[32;1mpolis-server            |[0m       defaultEncoding: 'utf8',
+[32;1mpolis-server            |[0m       length: 0,
+[32;1mpolis-server            |[0m       writing: false,
+[32;1mpolis-server            |[0m       corked: 0,
+[32;1mpolis-server            |[0m       sync: true,
+[32;1mpolis-server            |[0m       bufferProcessing: false,
+[32;1mpolis-server            |[0m       onwrite: [Function: bound onwrite],
+[32;1mpolis-server            |[0m       writecb: null,
+[32;1mpolis-server            |[0m       writelen: 0,
+[32;1mpolis-server            |[0m       afterWriteTickInfo: null,
+[32;1mpolis-server            |[0m       buffered: [],
+[32;1mpolis-server            |[0m       bufferedIndex: 0,
+[32;1mpolis-server            |[0m       allBuffers: true,
+[32;1mpolis-server            |[0m       allNoop: true,
+[32;1mpolis-server            |[0m       pendingcb: 0,
+[32;1mpolis-server            |[0m       prefinished: false,
+[32;1mpolis-server            |[0m       errorEmitted: false,
+[32;1mpolis-server            |[0m       emitClose: false,
+[32;1mpolis-server            |[0m       autoDestroy: false,
+[32;1mpolis-server            |[0m       errored: null,
+[32;1mpolis-server            |[0m       closed: false,
+[32;1mpolis-server            |[0m       closeEmitted: false
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     allowHalfOpen: true,
+[32;1mpolis-server            |[0m     _sockname: null,
+[32;1mpolis-server            |[0m     _pendingData: null,
+[32;1mpolis-server            |[0m     _pendingEncoding: '',
+[32;1mpolis-server            |[0m     server: Server {
+[32;1mpolis-server            |[0m       maxHeaderSize: undefined,
+[32;1mpolis-server            |[0m       insecureHTTPParser: undefined,
+[32;1mpolis-server            |[0m       _events: [Object: null prototype],
+[32;1mpolis-server            |[0m       _eventsCount: 2,
+[32;1mpolis-server            |[0m       _maxListeners: undefined,
+[32;1mpolis-server            |[0m       _connections: 1,
+[32;1mpolis-server            |[0m       _handle: [TCP],
+[32;1mpolis-server            |[0m       _usingWorkers: false,
+[32;1mpolis-server            |[0m       _workers: [],
+[32;1mpolis-server            |[0m       _unref: false,
+[32;1mpolis-server            |[0m       allowHalfOpen: true,
+[32;1mpolis-server            |[0m       pauseOnConnect: false,
+[32;1mpolis-server            |[0m       httpAllowHalfOpen: false,
+[32;1mpolis-server            |[0m       timeout: 0,
+[32;1mpolis-server            |[0m       keepAliveTimeout: 5000,
+[32;1mpolis-server            |[0m       maxHeadersCount: null,
+[32;1mpolis-server            |[0m       headersTimeout: 60000,
+[32;1mpolis-server            |[0m       requestTimeout: 0,
+[32;1mpolis-server            |[0m       _connectionKey: '6::::5000',
+[32;1mpolis-server            |[0m       [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+[32;1mpolis-server            |[0m       [Symbol(ServerResponse)]: [Function: ServerResponse],
+[32;1mpolis-server            |[0m       [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m       [Symbol(async_id_symbol)]: 25
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     _server: Server {
+[32;1mpolis-server            |[0m       maxHeaderSize: undefined,
+[32;1mpolis-server            |[0m       insecureHTTPParser: undefined,
+[32;1mpolis-server            |[0m       _events: [Object: null prototype],
+[32;1mpolis-server            |[0m       _eventsCount: 2,
+[32;1mpolis-server            |[0m       _maxListeners: undefined,
+[32;1mpolis-server            |[0m       _connections: 1,
+[32;1mpolis-server            |[0m       _handle: [TCP],
+[32;1mpolis-server            |[0m       _usingWorkers: false,
+[32;1mpolis-server            |[0m       _workers: [],
+[32;1mpolis-server            |[0m       _unref: false,
+[32;1mpolis-server            |[0m       allowHalfOpen: true,
+[32;1mpolis-server            |[0m       pauseOnConnect: false,
+[32;1mpolis-server            |[0m       httpAllowHalfOpen: false,
+[32;1mpolis-server            |[0m       timeout: 0,
+[32;1mpolis-server            |[0m       keepAliveTimeout: 5000,
+[32;1mpolis-server            |[0m       maxHeadersCount: null,
+[32;1mpolis-server            |[0m       headersTimeout: 60000,
+[32;1mpolis-server            |[0m       requestTimeout: 0,
+[32;1mpolis-server            |[0m       _connectionKey: '6::::5000',
+[32;1mpolis-server            |[0m       [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+[32;1mpolis-server            |[0m       [Symbol(ServerResponse)]: [Function: ServerResponse],
+[32;1mpolis-server            |[0m       [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m       [Symbol(async_id_symbol)]: 25
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     parser: HTTPParser {
+[32;1mpolis-server            |[0m       '0': [Function: bound setRequestTimeout],
+[32;1mpolis-server            |[0m       '1': [Function: parserOnHeaders],
+[32;1mpolis-server            |[0m       '2': [Function: parserOnHeadersComplete],
+[32;1mpolis-server            |[0m       '3': [Function: parserOnBody],
+[32;1mpolis-server            |[0m       '4': [Function: parserOnMessageComplete],
+[32;1mpolis-server            |[0m       '5': [Function: bound onParserExecute],
+[32;1mpolis-server            |[0m       '6': [Function: bound onParserTimeout],
+[32;1mpolis-server            |[0m       _headers: [],
+[32;1mpolis-server            |[0m       _url: '',
+[32;1mpolis-server            |[0m       socket: [Circular *1],
+[32;1mpolis-server            |[0m       incoming: [Circular *2],
+[32;1mpolis-server            |[0m       outgoing: null,
+[32;1mpolis-server            |[0m       maxHeaderPairs: 2000,
+[32;1mpolis-server            |[0m       _consumed: true,
+[32;1mpolis-server            |[0m       onIncoming: [Function: bound parserOnIncoming],
+[32;1mpolis-server            |[0m       [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     on: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m     addListener: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m     prependListener: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m     _paused: false,
+[32;1mpolis-server            |[0m     _httpMessage: ServerResponse {
+[32;1mpolis-server            |[0m       _events: [Object: null prototype],
+[32;1mpolis-server            |[0m       _eventsCount: 1,
+[32;1mpolis-server            |[0m       _maxListeners: undefined,
+[32;1mpolis-server            |[0m       outputData: [],
+[32;1mpolis-server            |[0m       outputSize: 0,
+[32;1mpolis-server            |[0m       writable: true,
+[32;1mpolis-server            |[0m       destroyed: false,
+[32;1mpolis-server            |[0m       _last: false,
+[32;1mpolis-server            |[0m       chunkedEncoding: false,
+[32;1mpolis-server            |[0m       shouldKeepAlive: false,
+[32;1mpolis-server            |[0m       _defaultKeepAlive: true,
+[32;1mpolis-server            |[0m       useChunkedEncodingByDefault: false,
+[32;1mpolis-server            |[0m       sendDate: true,
+[32;1mpolis-server            |[0m       _removedConnection: false,
+[32;1mpolis-server            |[0m       _removedContLen: false,
+[32;1mpolis-server            |[0m       _removedTE: false,
+[32;1mpolis-server            |[0m       _contentLength: null,
+[32;1mpolis-server            |[0m       _hasBody: true,
+[32;1mpolis-server            |[0m       _trailer: '',
+[32;1mpolis-server            |[0m       finished: false,
+[32;1mpolis-server            |[0m       _headerSent: false,
+[32;1mpolis-server            |[0m       socket: [Circular *1],
+[32;1mpolis-server            |[0m       _header: null,
+[32;1mpolis-server            |[0m       _keepAliveTimeout: 5000,
+[32;1mpolis-server            |[0m       _onPendingData: [Function: bound updateOutgoingData],
+[32;1mpolis-server            |[0m       _sent100: false,
+[32;1mpolis-server            |[0m       _expect_continue: false,
+[32;1mpolis-server            |[0m       req: [Circular *2],
+[32;1mpolis-server            |[0m       locals: [Function: locals],
+[32;1mpolis-server            |[0m       writeHead: [Function: writeHead],
+[32;1mpolis-server            |[0m       flush: [Function: flush],
+[32;1mpolis-server            |[0m       write: [Function (anonymous)],
+[32;1mpolis-server            |[0m       end: [Function (anonymous)],
+[32;1mpolis-server            |[0m       on: [Function (anonymous)],
+[32;1mpolis-server            |[0m       [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m       [Symbol(kNeedDrain)]: false,
+[32;1mpolis-server            |[0m       [Symbol(corked)]: 0,
+[32;1mpolis-server            |[0m       [Symbol(kOutHeaders)]: [Object: null prototype]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     [Symbol(async_id_symbol)]: 227,
+[32;1mpolis-server            |[0m     [Symbol(kHandle)]: TCP {
+[32;1mpolis-server            |[0m       reading: true,
+[32;1mpolis-server            |[0m       onconnection: null,
+[32;1mpolis-server            |[0m       _consumed: true,
+[32;1mpolis-server            |[0m       [Symbol(owner_symbol)]: [Circular *1]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     [Symbol(kSetNoDelay)]: false,
+[32;1mpolis-server            |[0m     [Symbol(lastWriteQueueSize)]: 0,
+[32;1mpolis-server            |[0m     [Symbol(timeout)]: null,
+[32;1mpolis-server            |[0m     [Symbol(kBuffer)]: null,
+[32;1mpolis-server            |[0m     [Symbol(kBufferCb)]: null,
+[32;1mpolis-server            |[0m     [Symbol(kBufferGen)]: null,
+[32;1mpolis-server            |[0m     [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m     [Symbol(kBytesRead)]: 0,
+[32;1mpolis-server            |[0m     [Symbol(kBytesWritten)]: 0,
+[32;1mpolis-server            |[0m     [Symbol(RequestTimeout)]: undefined
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   httpVersionMajor: 1,
+[32;1mpolis-server            |[0m   httpVersionMinor: 0,
+[32;1mpolis-server            |[0m   httpVersion: '1.0',
+[32;1mpolis-server            |[0m   complete: true,
+[32;1mpolis-server            |[0m   headers: {
+[32;1mpolis-server            |[0m     'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m     host: 'localhost',
+[32;1mpolis-server            |[0m     connection: 'close',
+[32;1mpolis-server            |[0m     'content-length': '42',
+[32;1mpolis-server            |[0m     'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m     accept: 'application/json, text/plain, */*',
+[32;1mpolis-server            |[0m     'content-type': 'application/json',
+[32;1mpolis-server            |[0m     'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m     'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m     origin: 'http://localhost',
+[32;1mpolis-server            |[0m     'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m     'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m     'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m     referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m     'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m     'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m     cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   rawHeaders: [
+[32;1mpolis-server            |[0m     'X-Forwarded-Proto',
+[32;1mpolis-server            |[0m     'http',
+[32;1mpolis-server            |[0m     'Host',
+[32;1mpolis-server            |[0m     'localhost',
+[32;1mpolis-server            |[0m     'Connection',
+[32;1mpolis-server            |[0m     'close',
+[32;1mpolis-server            |[0m     'Content-Length',
+[32;1mpolis-server            |[0m     '42',
+[32;1mpolis-server            |[0m     'sec-ch-ua',
+[32;1mpolis-server            |[0m     '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m     'Accept',
+[32;1mpolis-server            |[0m     'application/json, text/plain, */*',
+[32;1mpolis-server            |[0m     'Content-Type',
+[32;1mpolis-server            |[0m     'application/json',
+[32;1mpolis-server            |[0m     'sec-ch-ua-mobile',
+[32;1mpolis-server            |[0m     '?0',
+[32;1mpolis-server            |[0m     'User-Agent',
+[32;1mpolis-server            |[0m     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m     'sec-ch-ua-platform',
+[32;1mpolis-server            |[0m     '"macOS"',
+[32;1mpolis-server            |[0m     'Origin',
+[32;1mpolis-server            |[0m     'http://localhost',
+[32;1mpolis-server            |[0m     'Sec-Fetch-Site',
+[32;1mpolis-server            |[0m     'same-origin',
+[32;1mpolis-server            |[0m     'Sec-Fetch-Mode',
+[32;1mpolis-server            |[0m     'cors',
+[32;1mpolis-server            |[0m     'Sec-Fetch-Dest',
+[32;1mpolis-server            |[0m     'empty',
+[32;1mpolis-server            |[0m     'Referer',
+[32;1mpolis-server            |[0m     'http://localhost/createuser',
+[32;1mpolis-server            |[0m     'Accept-Encoding',
+[32;1mpolis-server            |[0m     'gzip, deflate, br',
+[32;1mpolis-server            |[0m     'Accept-Language',
+[32;1mpolis-server            |[0m     'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m     'Cookie',
+[32;1mpolis-server            |[0m     'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m   ],
+[32;1mpolis-server            |[0m   trailers: {},
+[32;1mpolis-server            |[0m   rawTrailers: [],
+[32;1mpolis-server            |[0m   aborted: false,
+[32;1mpolis-server            |[0m   upgrade: false,
+[32;1mpolis-server            |[0m   url: '/ldaplogin',
+[32;1mpolis-server            |[0m   method: 'POST',
+[32;1mpolis-server            |[0m   statusCode: null,
+[32;1mpolis-server            |[0m   statusMessage: null,
+[32;1mpolis-server            |[0m   client: <ref *1> Socket {
+[32;1mpolis-server            |[0m     connecting: false,
+[32;1mpolis-server            |[0m     _hadError: false,
+[32;1mpolis-server            |[0m     _parent: null,
+[32;1mpolis-server            |[0m     _host: null,
+[32;1mpolis-server            |[0m     _readableState: ReadableState {
+[32;1mpolis-server            |[0m       objectMode: false,
+[32;1mpolis-server            |[0m       highWaterMark: 16384,
+[32;1mpolis-server            |[0m       buffer: BufferList { head: null, tail: null, length: 0 },
+[32;1mpolis-server            |[0m       length: 0,
+[32;1mpolis-server            |[0m       pipes: [],
+[32;1mpolis-server            |[0m       flowing: true,
+[32;1mpolis-server            |[0m       ended: false,
+[32;1mpolis-server            |[0m       endEmitted: false,
+[32;1mpolis-server            |[0m       reading: true,
+[32;1mpolis-server            |[0m       sync: false,
+[32;1mpolis-server            |[0m       needReadable: true,
+[32;1mpolis-server            |[0m       emittedReadable: false,
+[32;1mpolis-server            |[0m       readableListening: false,
+[32;1mpolis-server            |[0m       resumeScheduled: false,
+[32;1mpolis-server            |[0m       errorEmitted: false,
+[32;1mpolis-server            |[0m       emitClose: false,
+[32;1mpolis-server            |[0m       autoDestroy: false,
+[32;1mpolis-server            |[0m       destroyed: false,
+[32;1mpolis-server            |[0m       errored: null,
+[32;1mpolis-server            |[0m       closed: false,
+[32;1mpolis-server            |[0m       closeEmitted: false,
+[32;1mpolis-server            |[0m       defaultEncoding: 'utf8',
+[32;1mpolis-server            |[0m       awaitDrainWriters: null,
+[32;1mpolis-server            |[0m       multiAwaitDrain: false,
+[32;1mpolis-server            |[0m       readingMore: false,
+[32;1mpolis-server            |[0m       decoder: null,
+[32;1mpolis-server            |[0m       encoding: null,
+[32;1mpolis-server            |[0m       [Symbol(kPaused)]: false
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     _events: [Object: null prototype] {
+[32;1mpolis-server            |[0m       end: [Array],
+[32;1mpolis-server            |[0m       timeout: [Function: socketOnTimeout],
+[32;1mpolis-server            |[0m       data: [Function: bound socketOnData],
+[32;1mpolis-server            |[0m       error: [Function: socketOnError],
+[32;1mpolis-server            |[0m       close: [Array],
+[32;1mpolis-server            |[0m       drain: [Function: bound socketOnDrain],
+[32;1mpolis-server            |[0m       resume: [Function: onSocketResume],
+[32;1mpolis-server            |[0m       pause: [Function: onSocketPause]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     _eventsCount: 8,
+[32;1mpolis-server            |[0m     _maxListeners: undefined,
+[32;1mpolis-server            |[0m     _writableState: WritableState {
+[32;1mpolis-server            |[0m       objectMode: false,
+[32;1mpolis-server            |[0m       highWaterMark: 16384,
+[32;1mpolis-server            |[0m       finalCalled: false,
+[32;1mpolis-server            |[0m       needDrain: false,
+[32;1mpolis-server            |[0m       ending: false,
+[32;1mpolis-server            |[0m       ended: false,
+[32;1mpolis-server            |[0m       finished: false,
+[32;1mpolis-server            |[0m       destroyed: false,
+[32;1mpolis-server            |[0m       decodeStrings: false,
+[32;1mpolis-server            |[0m       defaultEncoding: 'utf8',
+[32;1mpolis-server            |[0m       length: 0,
+[32;1mpolis-server            |[0m       writing: false,
+[32;1mpolis-server            |[0m       corked: 0,
+[32;1mpolis-server            |[0m       sync: true,
+[32;1mpolis-server            |[0m       bufferProcessing: false,
+[32;1mpolis-server            |[0m       onwrite: [Function: bound onwrite],
+[32;1mpolis-server            |[0m       writecb: null,
+[32;1mpolis-server            |[0m       writelen: 0,
+[32;1mpolis-server            |[0m       afterWriteTickInfo: null,
+[32;1mpolis-server            |[0m       buffered: [],
+[32;1mpolis-server            |[0m       bufferedIndex: 0,
+[32;1mpolis-server            |[0m       allBuffers: true,
+[32;1mpolis-server            |[0m       allNoop: true,
+[32;1mpolis-server            |[0m       pendingcb: 0,
+[32;1mpolis-server            |[0m       prefinished: false,
+[32;1mpolis-server            |[0m       errorEmitted: false,
+[32;1mpolis-server            |[0m       emitClose: false,
+[32;1mpolis-server            |[0m       autoDestroy: false,
+[32;1mpolis-server            |[0m       errored: null,
+[32;1mpolis-server            |[0m       closed: false,
+[32;1mpolis-server            |[0m       closeEmitted: false
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     allowHalfOpen: true,
+[32;1mpolis-server            |[0m     _sockname: null,
+[32;1mpolis-server            |[0m     _pendingData: null,
+[32;1mpolis-server            |[0m     _pendingEncoding: '',
+[32;1mpolis-server            |[0m     server: Server {
+[32;1mpolis-server            |[0m       maxHeaderSize: undefined,
+[32;1mpolis-server            |[0m       insecureHTTPParser: undefined,
+[32;1mpolis-server            |[0m       _events: [Object: null prototype],
+[32;1mpolis-server            |[0m       _eventsCount: 2,
+[32;1mpolis-server            |[0m       _maxListeners: undefined,
+[32;1mpolis-server            |[0m       _connections: 1,
+[32;1mpolis-server            |[0m       _handle: [TCP],
+[32;1mpolis-server            |[0m       _usingWorkers: false,
+[32;1mpolis-server            |[0m       _workers: [],
+[32;1mpolis-server            |[0m       _unref: false,
+[32;1mpolis-server            |[0m       allowHalfOpen: true,
+[32;1mpolis-server            |[0m       pauseOnConnect: false,
+[32;1mpolis-server            |[0m       httpAllowHalfOpen: false,
+[32;1mpolis-server            |[0m       timeout: 0,
+[32;1mpolis-server            |[0m       keepAliveTimeout: 5000,
+[32;1mpolis-server            |[0m       maxHeadersCount: null,
+[32;1mpolis-server            |[0m       headersTimeout: 60000,
+[32;1mpolis-server            |[0m       requestTimeout: 0,
+[32;1mpolis-server            |[0m       _connectionKey: '6::::5000',
+[32;1mpolis-server            |[0m       [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+[32;1mpolis-server            |[0m       [Symbol(ServerResponse)]: [Function: ServerResponse],
+[32;1mpolis-server            |[0m       [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m       [Symbol(async_id_symbol)]: 25
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     _server: Server {
+[32;1mpolis-server            |[0m       maxHeaderSize: undefined,
+[32;1mpolis-server            |[0m       insecureHTTPParser: undefined,
+[32;1mpolis-server            |[0m       _events: [Object: null prototype],
+[32;1mpolis-server            |[0m       _eventsCount: 2,
+[32;1mpolis-server            |[0m       _maxListeners: undefined,
+[32;1mpolis-server            |[0m       _connections: 1,
+[32;1mpolis-server            |[0m       _handle: [TCP],
+[32;1mpolis-server            |[0m       _usingWorkers: false,
+[32;1mpolis-server            |[0m       _workers: [],
+[32;1mpolis-server            |[0m       _unref: false,
+[32;1mpolis-server            |[0m       allowHalfOpen: true,
+[32;1mpolis-server            |[0m       pauseOnConnect: false,
+[32;1mpolis-server            |[0m       httpAllowHalfOpen: false,
+[32;1mpolis-server            |[0m       timeout: 0,
+[32;1mpolis-server            |[0m       keepAliveTimeout: 5000,
+[32;1mpolis-server            |[0m       maxHeadersCount: null,
+[32;1mpolis-server            |[0m       headersTimeout: 60000,
+[32;1mpolis-server            |[0m       requestTimeout: 0,
+[32;1mpolis-server            |[0m       _connectionKey: '6::::5000',
+[32;1mpolis-server            |[0m       [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+[32;1mpolis-server            |[0m       [Symbol(ServerResponse)]: [Function: ServerResponse],
+[32;1mpolis-server            |[0m       [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m       [Symbol(async_id_symbol)]: 25
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     parser: HTTPParser {
+[32;1mpolis-server            |[0m       '0': [Function: bound setRequestTimeout],
+[32;1mpolis-server            |[0m       '1': [Function: parserOnHeaders],
+[32;1mpolis-server            |[0m       '2': [Function: parserOnHeadersComplete],
+[32;1mpolis-server            |[0m       '3': [Function: parserOnBody],
+[32;1mpolis-server            |[0m       '4': [Function: parserOnMessageComplete],
+[32;1mpolis-server            |[0m       '5': [Function: bound onParserExecute],
+[32;1mpolis-server            |[0m       '6': [Function: bound onParserTimeout],
+[32;1mpolis-server            |[0m       _headers: [],
+[32;1mpolis-server            |[0m       _url: '',
+[32;1mpolis-server            |[0m       socket: [Circular *1],
+[32;1mpolis-server            |[0m       incoming: [Circular *2],
+[32;1mpolis-server            |[0m       outgoing: null,
+[32;1mpolis-server            |[0m       maxHeaderPairs: 2000,
+[32;1mpolis-server            |[0m       _consumed: true,
+[32;1mpolis-server            |[0m       onIncoming: [Function: bound parserOnIncoming],
+[32;1mpolis-server            |[0m       [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     on: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m     addListener: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m     prependListener: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m     _paused: false,
+[32;1mpolis-server            |[0m     _httpMessage: ServerResponse {
+[32;1mpolis-server            |[0m       _events: [Object: null prototype],
+[32;1mpolis-server            |[0m       _eventsCount: 1,
+[32;1mpolis-server            |[0m       _maxListeners: undefined,
+[32;1mpolis-server            |[0m       outputData: [],
+[32;1mpolis-server            |[0m       outputSize: 0,
+[32;1mpolis-server            |[0m       writable: true,
+[32;1mpolis-server            |[0m       destroyed: false,
+[32;1mpolis-server            |[0m       _last: false,
+[32;1mpolis-server            |[0m       chunkedEncoding: false,
+[32;1mpolis-server            |[0m       shouldKeepAlive: false,
+[32;1mpolis-server            |[0m       _defaultKeepAlive: true,
+[32;1mpolis-server            |[0m       useChunkedEncodingByDefault: false,
+[32;1mpolis-server            |[0m       sendDate: true,
+[32;1mpolis-server            |[0m       _removedConnection: false,
+[32;1mpolis-server            |[0m       _removedContLen: false,
+[32;1mpolis-server            |[0m       _removedTE: false,
+[32;1mpolis-server            |[0m       _contentLength: null,
+[32;1mpolis-server            |[0m       _hasBody: true,
+[32;1mpolis-server            |[0m       _trailer: '',
+[32;1mpolis-server            |[0m       finished: false,
+[32;1mpolis-server            |[0m       _headerSent: false,
+[32;1mpolis-server            |[0m       socket: [Circular *1],
+[32;1mpolis-server            |[0m       _header: null,
+[32;1mpolis-server            |[0m       _keepAliveTimeout: 5000,
+[32;1mpolis-server            |[0m       _onPendingData: [Function: bound updateOutgoingData],
+[32;1mpolis-server            |[0m       _sent100: false,
+[32;1mpolis-server            |[0m       _expect_continue: false,
+[32;1mpolis-server            |[0m       req: [Circular *2],
+[32;1mpolis-server            |[0m       locals: [Function: locals],
+[32;1mpolis-server            |[0m       writeHead: [Function: writeHead],
+[32;1mpolis-server            |[0m       flush: [Function: flush],
+[32;1mpolis-server            |[0m       write: [Function (anonymous)],
+[32;1mpolis-server            |[0m       end: [Function (anonymous)],
+[32;1mpolis-server            |[0m       on: [Function (anonymous)],
+[32;1mpolis-server            |[0m       [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m       [Symbol(kNeedDrain)]: false,
+[32;1mpolis-server            |[0m       [Symbol(corked)]: 0,
+[32;1mpolis-server            |[0m       [Symbol(kOutHeaders)]: [Object: null prototype]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     [Symbol(async_id_symbol)]: 227,
+[32;1mpolis-server            |[0m     [Symbol(kHandle)]: TCP {
+[32;1mpolis-server            |[0m       reading: true,
+[32;1mpolis-server            |[0m       onconnection: null,
+[32;1mpolis-server            |[0m       _consumed: true,
+[32;1mpolis-server            |[0m       [Symbol(owner_symbol)]: [Circular *1]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     [Symbol(kSetNoDelay)]: false,
+[32;1mpolis-server            |[0m     [Symbol(lastWriteQueueSize)]: 0,
+[32;1mpolis-server            |[0m     [Symbol(timeout)]: null,
+[32;1mpolis-server            |[0m     [Symbol(kBuffer)]: null,
+[32;1mpolis-server            |[0m     [Symbol(kBufferCb)]: null,
+[32;1mpolis-server            |[0m     [Symbol(kBufferGen)]: null,
+[32;1mpolis-server            |[0m     [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m     [Symbol(kBytesRead)]: 0,
+[32;1mpolis-server            |[0m     [Symbol(kBytesWritten)]: 0,
+[32;1mpolis-server            |[0m     [Symbol(RequestTimeout)]: undefined
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   _consuming: true,
+[32;1mpolis-server            |[0m   _dumped: false,
+[32;1mpolis-server            |[0m   originalUrl: '/ldaplogin',
+[32;1mpolis-server            |[0m   _parsedUrl: Url {
+[32;1mpolis-server            |[0m     protocol: null,
+[32;1mpolis-server            |[0m     slashes: null,
+[32;1mpolis-server            |[0m     auth: null,
+[32;1mpolis-server            |[0m     host: null,
+[32;1mpolis-server            |[0m     port: null,
+[32;1mpolis-server            |[0m     hostname: null,
+[32;1mpolis-server            |[0m     hash: null,
+[32;1mpolis-server            |[0m     search: null,
+[32;1mpolis-server            |[0m     query: null,
+[32;1mpolis-server            |[0m     pathname: '/ldaplogin',
+[32;1mpolis-server            |[0m     path: '/ldaplogin',
+[32;1mpolis-server            |[0m     href: '/ldaplogin',
+[32;1mpolis-server            |[0m     _raw: '/ldaplogin'
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   query: {},
+[32;1mpolis-server            |[0m   res: <ref *3> ServerResponse {
+[32;1mpolis-server            |[0m     _events: [Object: null prototype] { finish: [Function: bound resOnFinish] },
+[32;1mpolis-server            |[0m     _eventsCount: 1,
+[32;1mpolis-server            |[0m     _maxListeners: undefined,
+[32;1mpolis-server            |[0m     outputData: [],
+[32;1mpolis-server            |[0m     outputSize: 0,
+[32;1mpolis-server            |[0m     writable: true,
+[32;1mpolis-server            |[0m     destroyed: false,
+[32;1mpolis-server            |[0m     _last: false,
+[32;1mpolis-server            |[0m     chunkedEncoding: false,
+[32;1mpolis-server            |[0m     shouldKeepAlive: false,
+[32;1mpolis-server            |[0m     _defaultKeepAlive: true,
+[32;1mpolis-server            |[0m     useChunkedEncodingByDefault: false,
+[32;1mpolis-server            |[0m     sendDate: true,
+[32;1mpolis-server            |[0m     _removedConnection: false,
+[32;1mpolis-server            |[0m     _removedContLen: false,
+[32;1mpolis-server            |[0m     _removedTE: false,
+[32;1mpolis-server            |[0m     _contentLength: null,
+[32;1mpolis-server            |[0m     _hasBody: true,
+[32;1mpolis-server            |[0m     _trailer: '',
+[32;1mpolis-server            |[0m     finished: false,
+[32;1mpolis-server            |[0m     _headerSent: false,
+[32;1mpolis-server            |[0m     socket: <ref *1> Socket {
+[32;1mpolis-server            |[0m       connecting: false,
+[32;1mpolis-server            |[0m       _hadError: false,
+[32;1mpolis-server            |[0m       _parent: null,
+[32;1mpolis-server            |[0m       _host: null,
+[32;1mpolis-server            |[0m       _readableState: [ReadableState],
+[32;1mpolis-server            |[0m       _events: [Object: null prototype],
+[32;1mpolis-server            |[0m       _eventsCount: 8,
+[32;1mpolis-server            |[0m       _maxListeners: undefined,
+[32;1mpolis-server            |[0m       _writableState: [WritableState],
+[32;1mpolis-server            |[0m       allowHalfOpen: true,
+[32;1mpolis-server            |[0m       _sockname: null,
+[32;1mpolis-server            |[0m       _pendingData: null,
+[32;1mpolis-server            |[0m       _pendingEncoding: '',
+[32;1mpolis-server            |[0m       server: [Server],
+[32;1mpolis-server            |[0m       _server: [Server],
+[32;1mpolis-server            |[0m       parser: [HTTPParser],
+[32;1mpolis-server            |[0m       on: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m       addListener: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m       prependListener: [Function: socketListenerWrap],
+[32;1mpolis-server            |[0m       _paused: false,
+[32;1mpolis-server            |[0m       _httpMessage: [Circular *3],
+[32;1mpolis-server            |[0m       [Symbol(async_id_symbol)]: 227,
+[32;1mpolis-server            |[0m       [Symbol(kHandle)]: [TCP],
+[32;1mpolis-server            |[0m       [Symbol(kSetNoDelay)]: false,
+[32;1mpolis-server            |[0m       [Symbol(lastWriteQueueSize)]: 0,
+[32;1mpolis-server            |[0m       [Symbol(timeout)]: null,
+[32;1mpolis-server            |[0m       [Symbol(kBuffer)]: null,
+[32;1mpolis-server            |[0m       [Symbol(kBufferCb)]: null,
+[32;1mpolis-server            |[0m       [Symbol(kBufferGen)]: null,
+[32;1mpolis-server            |[0m       [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m       [Symbol(kBytesRead)]: 0,
+[32;1mpolis-server            |[0m       [Symbol(kBytesWritten)]: 0,
+[32;1mpolis-server            |[0m       [Symbol(RequestTimeout)]: undefined
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     _header: null,
+[32;1mpolis-server            |[0m     _keepAliveTimeout: 5000,
+[32;1mpolis-server            |[0m     _onPendingData: [Function: bound updateOutgoingData],
+[32;1mpolis-server            |[0m     _sent100: false,
+[32;1mpolis-server            |[0m     _expect_continue: false,
+[32;1mpolis-server            |[0m     req: [Circular *2],
+[32;1mpolis-server            |[0m     locals: [Function: locals],
+[32;1mpolis-server            |[0m     writeHead: [Function: writeHead],
+[32;1mpolis-server            |[0m     flush: [Function: flush],
+[32;1mpolis-server            |[0m     write: [Function (anonymous)],
+[32;1mpolis-server            |[0m     end: [Function (anonymous)],
+[32;1mpolis-server            |[0m     on: [Function (anonymous)],
+[32;1mpolis-server            |[0m     [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m     [Symbol(kNeedDrain)]: false,
+[32;1mpolis-server            |[0m     [Symbol(corked)]: 0,
+[32;1mpolis-server            |[0m     [Symbol(kOutHeaders)]: [Object: null prototype] {
+[32;1mpolis-server            |[0m       'content-type': [Array],
+[32;1mpolis-server            |[0m       'cache-control': [Array],
+[32;1mpolis-server            |[0m       connection: [Array]
+[32;1mpolis-server            |[0m     }
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   next: [Function: next],
+[32;1mpolis-server            |[0m   body: { username: 'gauss', password: 'password' },
+[32;1mpolis-server            |[0m   sessionCookies: Cookies {
+[32;1mpolis-server            |[0m     secure: undefined,
+[32;1mpolis-server            |[0m     request: [Circular *2],
+[32;1mpolis-server            |[0m     response: <ref *3> ServerResponse {
+[32;1mpolis-server            |[0m       _events: [Object: null prototype],
+[32;1mpolis-server            |[0m       _eventsCount: 1,
+[32;1mpolis-server            |[0m       _maxListeners: undefined,
+[32;1mpolis-server            |[0m       outputData: [],
+[32;1mpolis-server            |[0m       outputSize: 0,
+[32;1mpolis-server            |[0m       writable: true,
+[32;1mpolis-server            |[0m       destroyed: false,
+[32;1mpolis-server            |[0m       _last: false,
+[32;1mpolis-server            |[0m       chunkedEncoding: false,
+[32;1mpolis-server            |[0m       shouldKeepAlive: false,
+[32;1mpolis-server            |[0m       _defaultKeepAlive: true,
+[32;1mpolis-server            |[0m       useChunkedEncodingByDefault: false,
+[32;1mpolis-server            |[0m       sendDate: true,
+[32;1mpolis-server            |[0m       _removedConnection: false,
+[32;1mpolis-server            |[0m       _removedContLen: false,
+[32;1mpolis-server            |[0m       _removedTE: false,
+[32;1mpolis-server            |[0m       _contentLength: null,
+[32;1mpolis-server            |[0m       _hasBody: true,
+[32;1mpolis-server            |[0m       _trailer: '',
+[32;1mpolis-server            |[0m       finished: false,
+[32;1mpolis-server            |[0m       _headerSent: false,
+[32;1mpolis-server            |[0m       socket: [Socket],
+[32;1mpolis-server            |[0m       _header: null,
+[32;1mpolis-server            |[0m       _keepAliveTimeout: 5000,
+[32;1mpolis-server            |[0m       _onPendingData: [Function: bound updateOutgoingData],
+[32;1mpolis-server            |[0m       _sent100: false,
+[32;1mpolis-server            |[0m       _expect_continue: false,
+[32;1mpolis-server            |[0m       req: [Circular *2],
+[32;1mpolis-server            |[0m       locals: [Function: locals],
+[32;1mpolis-server            |[0m       writeHead: [Function: writeHead],
+[32;1mpolis-server            |[0m       flush: [Function: flush],
+[32;1mpolis-server            |[0m       write: [Function (anonymous)],
+[32;1mpolis-server            |[0m       end: [Function (anonymous)],
+[32;1mpolis-server            |[0m       on: [Function (anonymous)],
+[32;1mpolis-server            |[0m       [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m       [Symbol(kNeedDrain)]: false,
+[32;1mpolis-server            |[0m       [Symbol(corked)]: 0,
+[32;1mpolis-server            |[0m       [Symbol(kOutHeaders)]: [Object: null prototype]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     keys: Keygrip {
+[32;1mpolis-server            |[0m       sign: [Function (anonymous)],
+[32;1mpolis-server            |[0m       verify: [Function (anonymous)],
+[32;1mpolis-server            |[0m       index: [Function (anonymous)]
+[32;1mpolis-server            |[0m     }
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   sessionOptions: {},
+[32;1mpolis-server            |[0m   sessionKey: 'session',
+[32;1mpolis-server            |[0m   session: [Getter/Setter],
+[32;1mpolis-server            |[0m   _passport: {
+[32;1mpolis-server            |[0m     instance: Authenticator {
+[32;1mpolis-server            |[0m       _key: 'passport',
+[32;1mpolis-server            |[0m       _strategies: [Object],
+[32;1mpolis-server            |[0m       _serializers: [Array],
+[32;1mpolis-server            |[0m       _deserializers: [Array],
+[32;1mpolis-server            |[0m       _infoTransformers: [],
+[32;1mpolis-server            |[0m       _framework: [Object],
+[32;1mpolis-server            |[0m       _userProperty: 'user',
+[32;1mpolis-server            |[0m       _sm: [SessionManager],
+[32;1mpolis-server            |[0m       Authenticator: [Function: Authenticator],
+[32;1mpolis-server            |[0m       Passport: [Function: Authenticator],
+[32;1mpolis-server            |[0m       Strategy: [Function],
+[32;1mpolis-server            |[0m       strategies: [Object]
+[32;1mpolis-server            |[0m     },
+[32;1mpolis-server            |[0m     session: { user: [Object] }
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   user: {
+[32;1mpolis-server            |[0m     dn: 'uid=gauss,dc=example,dc=com',
+[32;1mpolis-server            |[0m     controls: [],
+[32;1mpolis-server            |[0m     userPassword: '{sha}W6ph5Mm5Pz8GgiULbPgzG37mj9g=',
+[32;1mpolis-server            |[0m     objectClass: [ 'inetOrgPerson', 'organizationalPerson', 'person', 'top' ],
+[32;1mpolis-server            |[0m     cn: 'Carl Friedrich Gauss',
+[32;1mpolis-server            |[0m     sn: 'Gauss',
+[32;1mpolis-server            |[0m     uid: 'gauss',
+[32;1mpolis-server            |[0m     mail: 'gauss@ldap.forumsys.com'
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   secret: undefined,
+[32;1mpolis-server            |[0m   cookies: {
+[32;1mpolis-server            |[0m     'wp-settings-1': 'libraryContent=browse',
+[32;1mpolis-server            |[0m     'wp-settings-time-1': '1613394722',
+[32;1mpolis-server            |[0m     pc: 'NDubmbLQRFkMXoG42jDB',
+[32;1mpolis-server            |[0m     fblo_661042417336977: 'y',
+[32;1mpolis-server            |[0m     session: 'eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=',
+[32;1mpolis-server            |[0m     'session.sig': 'CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   signedCookies: [Object: null prototype] {},
+[32;1mpolis-server            |[0m   _body: true,
+[32;1mpolis-server            |[0m   length: undefined,
+[32;1mpolis-server            |[0m   _route_index: 39,
+[32;1mpolis-server            |[0m   route: Route {
+[32;1mpolis-server            |[0m     path: '/ldaplogin',
+[32;1mpolis-server            |[0m     method: 'post',
+[32;1mpolis-server            |[0m     callbacks: [ [Function (anonymous)] ],
+[32;1mpolis-server            |[0m     keys: [],
+[32;1mpolis-server            |[0m     regexp: /^\/ldaplogin\/?$/i,
+[32;1mpolis-server            |[0m     params: []
+[32;1mpolis-server            |[0m   },
+[32;1mpolis-server            |[0m   params: [],
+[32;1mpolis-server            |[0m   [Symbol(kCapture)]: false,
+[32;1mpolis-server            |[0m   [Symbol(RequestTimeout)]: undefined
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info heapUsed: 30158344 heapTotal: 31752192 rss: 84652032
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:41 +0000] "POST /ldaplogin HTTP/1.1" 200 26 "http://localhost/createuser" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   dn: 'uid=gauss,dc=example,dc=com',
+[32;1mpolis-server            |[0m   controls: [],
+[32;1mpolis-server            |[0m   userPassword: '{sha}W6ph5Mm5Pz8GgiULbPgzG37mj9g=',
+[32;1mpolis-server            |[0m   objectClass: [ 'inetOrgPerson', 'organizationalPerson', 'person', 'top' ],
+[32;1mpolis-server            |[0m   cn: 'Carl Friedrich Gauss',
+[32;1mpolis-server            |[0m   sn: 'Gauss',
+[32;1mpolis-server            |[0m   uid: 'gauss',
+[32;1mpolis-server            |[0m   mail: 'gauss@ldap.forumsys.com'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m MDV LDAPLOGIN USER MAIL undefined
+[32;1mpolis-server            |[0m MDV LDAPLOGIN USER INFO undefined
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'content-length': '85',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'content-type': 'application/json; charset=UTF-8',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/javascript, */*; q=0.01',
+[32;1mpolis-server            |[0m   'cache-control': 'max-age=0',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   origin: 'http://localhost',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /api/v3/auth/new {"hname":"somebody","email":"a@a.com","password":"some_password","gatekeeperTosPrivacy":true}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   hname: 'gauss',
+[32;1mpolis-server            |[0m   email: 'a@a.com',
+[32;1mpolis-server            |[0m   password: 'password',
+[32;1mpolis-server            |[0m   gatekeeperTosPrivacy: true
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'content-length': '85',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'content-type': 'application/json; charset=UTF-8',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/javascript, */*; q=0.01',
+[32;1mpolis-server            |[0m   'cache-control': 'max-age=0',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   origin: 'http://localhost',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m **** MDV handle_POST_auth_new
+[32;1mpolis-server            |[0m MDV createUser gauss
+[32;1mpolis-server            |[0m MDV createUser password
+[32;1mpolis-server            |[0m MDV createUser undefined
+[32;1mpolis-server            |[0m MDV createUser a@a.com
+[32;1mpolis-server            |[0m MDV server createUser P001, REQ {
+[32;1mpolis-server            |[0m   password: 'password',
+[32;1mpolis-server            |[0m   email: 'a@a.com',
+[32;1mpolis-server            |[0m   hname: 'gauss',
+[32;1mpolis-server            |[0m   gatekeeperTosPrivacy: true,
+[32;1mpolis-server            |[0m   owner: true
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m MDV server createUser P002
+[32;1mpolis-server            |[0m MDV server createUser P003
+[32;1mpolis-server            |[0m MDV server createUser P004
+[32;1mpolis-server            |[0m MDV server createUser P005
+[32;1mpolis-server            |[0m MDV server createUser P006
+[32;1mpolis-server            |[0m MDV server createUser P007
+[32;1mpolis-server            |[0m MDV server createUser P008
+[32;1mpolis-server            |[0m info startSession
+[32;1mpolis-server            |[0m info startSession: token set.
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:42 +0000] "POST /api/v3/auth/new HTTP/1.1" 200 56 "http://localhost/createuser" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[36;1mpolis-math              |[0m WARNING: min already refers to: #'clojure.core/min in namespace: polismath.math.clusters, being replaced by: #'clojure.core.matrix.operators/min
+[36;1mpolis-math              |[0m WARNING: max already refers to: #'clojure.core/max in namespace: polismath.math.clusters, being replaced by: #'clojure.core.matrix.operators/max
+[36;1mpolis-math              |[0m WARNING: min already refers to: #'clojure.core/min in namespace: polismath.math.conversation, being replaced by: #'clojure.core.matrix.operators/min
+[36;1mpolis-math              |[0m WARNING: max already refers to: #'clojure.core/max in namespace: polismath.math.conversation, being replaced by: #'clojure.core.matrix.operators/max
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'upgrade-insecure-requests': '1',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'navigate',
+[32;1mpolis-server            |[0m   'sec-fetch-user': '?1',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'document',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk; token2=LlAlMonMmND9L8PntOkz; uid2=1; e=1; uc=1636391202325'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info / {}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'upgrade-insecure-requests': '1',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'navigate',
+[32;1mpolis-server            |[0m   'sec-fetch-user': '?1',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'document',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/createuser',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk; token2=LlAlMonMmND9L8PntOkz; uid2=1; e=1; uc=1636391202325'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info fetch file from http://file-server:8080/index_admin.html
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:45 +0000] "GET / HTTP/1.1" 200 1241 "http://localhost/createuser" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'content-type': 'application/json; charset=utf-8',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/javascript, */*; q=0.01',
+[32;1mpolis-server            |[0m   'cache-control': 'max-age=0',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk; token2=LlAlMonMmND9L8PntOkz; uid2=1; e=1; uc=1636391202325',
+[32;1mpolis-server            |[0m   'if-none-match': 'W/"126-5zafxnQXXNGlrygYYysMXA"'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /api/v3/users {}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'content-type': 'application/json; charset=utf-8',
+[32;1mpolis-server            |[0m   accept: 'application/json, text/javascript, */*; q=0.01',
+[32;1mpolis-server            |[0m   'cache-control': 'max-age=0',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk; token2=LlAlMonMmND9L8PntOkz; uid2=1; e=1; uc=1636391202325',
+[32;1mpolis-server            |[0m   'if-none-match': 'W/"126-5zafxnQXXNGlrygYYysMXA"'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m authtype doCookieAuth
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:45 +0000] "GET /api/v3/users?errIfNoAuth=true HTTP/1.1" 200 294 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[32;1mpolis-server            |[0m before
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   accept: '*/*',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk; token2=LlAlMonMmND9L8PntOkz; uid2=1; e=1; uc=1636391202325',
+[32;1mpolis-server            |[0m   'if-none-match': 'W/"2-11FxOYiYfpMxmANj4kGJzg"'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m info /api/v3/conversations {}
+[32;1mpolis-server            |[0m part2
+[32;1mpolis-server            |[0m {}
+[32;1mpolis-server            |[0m {
+[32;1mpolis-server            |[0m   'x-forwarded-proto': 'http',
+[32;1mpolis-server            |[0m   host: 'localhost',
+[32;1mpolis-server            |[0m   connection: 'close',
+[32;1mpolis-server            |[0m   'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
+[32;1mpolis-server            |[0m   accept: '*/*',
+[32;1mpolis-server            |[0m   'x-requested-with': 'XMLHttpRequest',
+[32;1mpolis-server            |[0m   'sec-ch-ua-mobile': '?0',
+[32;1mpolis-server            |[0m   'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+[32;1mpolis-server            |[0m   'sec-ch-ua-platform': '"macOS"',
+[32;1mpolis-server            |[0m   'sec-fetch-site': 'same-origin',
+[32;1mpolis-server            |[0m   'sec-fetch-mode': 'cors',
+[32;1mpolis-server            |[0m   'sec-fetch-dest': 'empty',
+[32;1mpolis-server            |[0m   referer: 'http://localhost/',
+[32;1mpolis-server            |[0m   'accept-encoding': 'gzip, deflate, br',
+[32;1mpolis-server            |[0m   'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,it;q=0.7',
+[32;1mpolis-server            |[0m   cookie: 'wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1613394722; pc=NDubmbLQRFkMXoG42jDB; fblo_661042417336977=y; session=eyJwYXNzcG9ydCI6eyJ1c2VyIjp7ImRuIjoidWlkPWdhdXNzLGRjPWV4YW1wbGUsZGM9Y29tIiwiY29udHJvbHMiOltdLCJ1c2VyUGFzc3dvcmQiOiJ7c2hhfVc2cGg1TW01UHo4R2dpVUxiUGd6RzM3bWo5Zz0iLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwib3JnYW5pemF0aW9uYWxQZXJzb24iLCJwZXJzb24iLCJ0b3AiXSwiY24iOiJDYXJsIEZyaWVkcmljaCBHYXVzcyIsInNuIjoiR2F1c3MiLCJ1aWQiOiJnYXVzcyIsIm1haWwiOiJnYXVzc0BsZGFwLmZvcnVtc3lzLmNvbSJ9fX0=; session.sig=CIFTMSsx8qrbulcwTNFMo0e0pZk; token2=LlAlMonMmND9L8PntOkz; uid2=1; e=1; uc=1636391202325',
+[32;1mpolis-server            |[0m   'if-none-match': 'W/"2-11FxOYiYfpMxmANj4kGJzg"'
+[32;1mpolis-server            |[0m }
+[32;1mpolis-server            |[0m authtype doCookieAuth
+[32;1mpolis-server            |[0m info thecontext undefined
+[35;1mpolis-nginx-proxy       |[0m ::ffff:172.20.0.1 - - [08/Nov/2021:17:06:46 +0000] "GET /api/v3/conversations?include_all_conversations_i_am_in=true HTTP/1.1" 304 0 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" "-"
+[36;1mpolis-math              |[0m WARNING: min already refers to: #'clojure.core/min in namespace: polismath.math.corr, being replaced by: #'clojure.core.matrix.operators/min
+[36;1mpolis-math              |[0m WARNING: max already refers to: #'clojure.core/max in namespace: polismath.math.corr, being replaced by: #'clojure.core.matrix.operators/max
