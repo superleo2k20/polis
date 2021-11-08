@@ -303,9 +303,9 @@ export const doCreateLdapUser = (attrs, dest) => {
   console.log("MDV IN doCreateLdapUser, ATTRS", attrs)
   return (dispatch) => {
 
-    console.log("MDV CALLING myLogin USER", attrs.user)
-    myloginCheck(dispatch, attrs, dest)
-    console.log("MDV RETURNED FROM CALLIG myLogin")
+    console.log("MDV CALLING ldapLoginChecker USER", attrs.user)
+    ldapLoginChecker(dispatch, attrs, dest, false)
+    console.log("MDV RETURNED FROM CALLIG myldapLoginCheckerogin")
 
   }
 }
@@ -645,13 +645,13 @@ const callFacebookLoginAPI = (dest, dispatch, optionalPassword) => {
 // declared outside the function so that the previous token is retained.
 let cancelToken
 
-
-const myloginCheck = (dispatch, attrs, dest) => {
+const ldapLoginChecker = (dispatch, attrs, dest, signin) => {
 
   //Save the cancel token for the current request
   cancelToken = Axios.CancelToken.source()
 
-  console.log("MDV CALLING Axios.. ATTRS", attrs);
+  console.log("MDV ldapLoginChecker ATTRS", attrs);
+  console.log("MDV CALldapLoginChecker SIGNING", signin);
 
   Axios({
     method: "POST",
@@ -664,33 +664,60 @@ const myloginCheck = (dispatch, attrs, dest) => {
     timeout: 3000, // msecs
     // cancelToken: cancelToken.token
 
-  }).then((respose) => {
+  }).then((reponse) => {
+
     // middleware replies with user email
-    console.log("MDV Axios got AUTHORIZED, LDAP email is: ", respose.data);
+    console.log("MDV ldapLoginChecker Axios AUTHORIZED, LDAP email is: ", reponse.data);
 
     // fills in the email coming from ldap server for the user
-    attrs.email = respose.data
+    const new_attrs = {
+      hname: attrs.hname,
+      email: reponse.data,
+      password: attrs.password,
+      gatekeeperTosPrivacy: true
+    }
 
-    console.log("MDV myloginCheck CREATING USER..")
-    dispatch(createUserInitiated())
-    return createUserPost(attrs).then(
-      () => {
+    if (signin) {
+
+      console.log("MDV ldapLoginChecker signin new_attrs", new_attrs)
+
+      dispatch(signinInitiated())
+
+      // createUserPost(new_attrs).then(
+      signinPost(new_attrs).then(
+
+        // callLapDLoginAPI(dest, dispatch, attrs)
         setTimeout(() => {
           // Force page to load so we can be sure the password is cleared from memory
           // delay a bit so the cookie has time to set
-          window.location = dest || ''
+          dispatch({ type: 'signin completed successfully' })
+          window.location = '/'
         }, 3000)
-      },
-      (err) => dispatch(createUserError(err))
-    )
+      )
+
+    } else {
+
+      console.log("MDV ldapLoginChecker creating new_attrs", new_attrs)
+      dispatch(createUserInitiated())
+      return createUserPost(new_attrs).then(
+        () => {
+          setTimeout(() => {
+            // Force page to load so we can be sure the password is cleared from memory
+            // delay a bit so the cookie has time to set
+            window.location = dest || ''
+          }, 3000)
+        },
+        (err) => dispatch(createUserError(err))
+      )
+    }
   }).catch(error => {
     // MDV Authorization Failed (Invalid Credentials)
-    console.log("MDV AUTORIZATION FAILED!");
+    console.log("MDV ldapLoginChecker AUTORIZATION FAILED!");
   });
 };
 
 
-const mylogin = (dispatch, attrs) => {
+const ex_mylogin = (dispatch, attrs) => {
 
   //Save the cancel token for the current request
   cancelToken = Axios.CancelToken.source()
@@ -706,17 +733,15 @@ const mylogin = (dispatch, attrs) => {
     timeout: 3000, // msecs
     // cancelToken: cancelToken.token
 
-  }).then((respose) => {
-    console.log("MDV AUTHORIZED!", respose);
+  }).then((reponse) => {
+    console.log("MDV AUTHORIZED!", reponse);
     dispatch(ldapSigninSuccessful())
     // alert('MDV: LDAP LOGGED SUCCESSFUL')
 
     // fills in the email coming from ldap server for the user
-    attrs.email = respose.data
-
     const new_attrs = {
       hname: attrs.user,
-      email: attrs.email,
+      email: reponse.data,
       password: attrs.password,
       gatekeeperTosPrivacy: true
     }
@@ -756,7 +781,7 @@ const callLapDLoginAPI = (dest, dispatch, attrs) => {
 
   console.log('MDV.. in callLapDLoginAPI attrs:', attrs)
 
-  mylogin(dispatch, attrs)
+  ldapLoginChecker(dispatch, attrs, undefined, true)
 
   console.log('MDV AFTER mylogin')
 

@@ -56,7 +56,7 @@ class SignIn extends React.Component {
   ldapButtonClicked(e) {
     e.preventDefault()
     const attrs = {
-      user: this.user.value,
+      hname: this.user.value,
       password: this.password.value
     }
 
@@ -64,7 +64,7 @@ class SignIn extends React.Component {
     if (!dest.length) {
       dest = '/'
     }
-    this.props.dispatch(doLdapSignin(dest,attrs))
+    this.props.dispatch(doLdapSignin(dest, attrs))
   }
 
   handleFacebookPasswordSubmit() {
@@ -155,8 +155,9 @@ class SignIn extends React.Component {
             privacy policy
           </Text>
         </Box>
-        <Box sx={{ my: 5 }}>
-        <input
+        <form>
+          <Box sx={{ my: 5 }}>
+            <input
               sx={{
                 fontFamily: 'body',
                 fontSize: [2],
@@ -185,17 +186,19 @@ class SignIn extends React.Component {
               ref={(c) => (this.password = c)}
               placeholder="password"
               type="password"
+              autocomplete="on"
             />
-          <Button
-            id="ldapSigninButton"
-            onClick={this.ldapButtonClicked.bind(this)}>
-            {this.props.ldapLoading ? 'LDAP Signing in' : 'LDAP Sign In'}
-          </Button>
-          <Text sx={{ my: 2 }}>
-            You have to be registereed to LDAP Directory Services
-            (user: gauss, password: password for Authentication test)
-          </Text>
-        </Box>
+            <Button
+              id="ldapSigninButton"
+              onClick={this.ldapButtonClicked.bind(this)}>
+              {this.props.ldapLoading ? 'LDAP Signing in' : 'LDAP Sign In'}
+            </Button>
+            <Text sx={{ my: 2 }}>
+              You have to be registereed to LDAP Directory Services
+              (user: gauss, password: password for Authentication test)
+            </Text>
+          </Box>
+        </form>
       </Box>
     )
   }
