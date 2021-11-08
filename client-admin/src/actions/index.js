@@ -6,12 +6,12 @@ import PolisNet from '../util/net'
 // MDV INI ADDED TO PACKAGE.JSON DEPENDENCIES
 import Axios from "axios";
 import f from '../strings/strings';
-const CONFIG = {
-  ldap: {
-    dn: 'dc=example,dc=com',
-    url: 'ldap://ldap.forumsys.com'
-  }
-}
+// const CONFIG = {
+//   ldap: {
+//     dn: 'dc=example,dc=com',
+//     url: 'ldap://ldap.forumsys.com'
+//   }
+// }
 // const cookieSession = require('cookie-session')
 // import { app } from './ldaplogin'
 // const { authenticate } = require('ldap-authentication')
