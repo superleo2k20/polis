@@ -17,6 +17,11 @@ function createUser(req, res) {
   let password = req.p.password;
   let password2 = req.p.password2; // for verification
   let email = req.p.email;
+  console.log("MDV createUser " + hname);
+  console.log("MDV createUser " + password);
+  console.log("MDV createUser " + password2);
+  console.log("MDV createUser " + email);
+
   let oinvite = req.p.oinvite;
   let zinvite = req.p.zinvite;
   let referrer = req.cookies[COOKIES.REFERRER];
@@ -29,6 +34,8 @@ function createUser(req, res) {
   let afterJoinRedirectUrl = req.p.afterJoinRedirectUrl;
 
   let site_id = void 0;
+
+  console.log("MDV server createUser P001, REQ",req.p)
   if (req.p.encodedParams) {
     let decodedParams = decodeParams(req.p.encodedParams);
     if (decodedParams.site_id) {
@@ -38,27 +45,35 @@ function createUser(req, res) {
       site_id = decodedParams.site_id;
     }
   }
+  console.log("MDV server createUser P002")
 
   if (password2 && password !== password2) {
     fail(res, 400, "Passwords do not match.");
     return;
   }
+  console.log("MDV server createUser P003")
+
   if (!gatekeeperTosPrivacy) {
     fail(res, 400, "polis_err_reg_need_tos");
     return;
   }
+  console.log("MDV server createUser P004")
+
   if (!email) {
     fail(res, 400, "polis_err_reg_need_email");
     return;
   }
+  console.log("MDV server createUser P005")
   if (!hname) {
     fail(res, 400, "polis_err_reg_need_name");
     return;
   }
+  console.log("MDV server createUser P006")
   if (!password) {
     fail(res, 400, "polis_err_reg_password");
     return;
   }
+  console.log("MDV server createUser P007")
   if (password.length < 6) {
     fail(res, 400, "polis_err_reg_password_too_short");
     return;
@@ -67,10 +82,14 @@ function createUser(req, res) {
     fail(res, 400, "polis_err_reg_bad_email");
     return;
   }
+  console.log("MDV server createUser P008")
+
+  // MDV QUESTO e' MYSQL !!!
 
   pg.queryP("SELECT * FROM users WHERE email = ($1)", [email]).then(
     function (rows) {
       if (rows.length > 0) {
+        console.log("MDV server createUser P009-> polis_err_reg_user_with_that_email_exists")
         fail(res, 403, "polis_err_reg_user_with_that_email_exists");
         return;
       }

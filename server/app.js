@@ -1,6 +1,16 @@
 // Copyright (C) 2012-present, The Authors. This program is free software: you can redistribute it and/or  modify it under the terms of the GNU Affero General Public License, version 3, as published by the Free Software Foundation. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 "use strict";
 
+// MDV
+
+const CONFIG = require('./config.js')
+const cookieSession = require('cookie-session')
+const bodyParser = require("body-parser");
+
+const passport = require('passport')
+const CustomStrategy = require('passport-custom').Strategy
+const { authenticate } = require('ldap-authentication')
+
 const Promise = require('bluebird');
 const express = require('express');
 
@@ -15,13 +25,71 @@ app.set('trust proxy', 'uniquelocal');
 
 console.log('init 1');
 
-var helpersInitialized = new Promise(function(resolve, reject) {
+// MDV PASSPORT INIT BEGIN
+
+passport.use('ldap', new CustomStrategy(
+  async function (req, done) {
+    try {
+      if (!req.body.username || !req.body.password) {
+        throw new Error('username and password are not provided')
+      }
+      // construct the parameter to pass in authenticate() function
+      let ldapBaseDn = CONFIG.ldap.dn
+      let options = {
+        ldapOpts: {
+          url: CONFIG.ldap.url
+        },
+        // note in this example it only use the user to directly
+        // bind to the LDAP server. You can also use an admin
+        // here. See the document of ldap-authentication.
+        userDn: `uid=${req.body.username},${ldapBaseDn}`,
+        userPassword: req.body.password,
+        userSearchBase: ldapBaseDn,
+        usernameAttribute: 'uid',
+        username: req.body.username
+      }
+      // ldap authenticate the user
+      let user = await authenticate(options)
+      // success
+      done(null, user)
+    } catch (error) {
+      // authentication failure
+      done(error, null)
+    }
+  }
+))
+
+// passport requires this
+passport.serializeUser(function (user, done) {
+  done(null, user);
+})
+// passport requires this
+passport.deserializeUser(function (user, done) {
+  done(null, user);
+})
+// passport requires a session
+var sessionMiddleWare = cookieSession({
+  name: 'session',
+  keys: ['keep the secret only to yourself'],
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+})
+
+// The order of the following middleware is very important for passport!!
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(sessionMiddleWare)
+// passport requires these two
+app.use(passport.initialize())
+app.use(passport.session())
+
+// MDV PASSPORT INIT END
+
+var helpersInitialized = new Promise(function (resolve, reject) {
   resolve(server.initializePolisHelpers());
 });
 
 
 
-helpersInitialized.then(function(o) {
+helpersInitialized.then(function (o) {
   const {
     addCorsHeader,
     auth,
@@ -236,7 +304,9 @@ helpersInitialized.then(function(o) {
   ////////////////////////////////////////////
   ////////////////////////////////////////////
 
-  app.use(function(req, res, next) {
+  console.log('MDV APP MIDDLEWARE INITIALIZING')
+
+  app.use(function (req, res, next) {
     console.log("before");
     console.log(req.body);
     console.log(req.headers);
@@ -262,7 +332,7 @@ helpersInitialized.then(function(o) {
   app.use(middleware_log_request_body);
   app.use(middleware_log_middleware_errors);
 
-  app.use(function(req, res, next) {
+  app.use(function (req, res, next) {
     console.log("part2");
     console.log(req.body);
     console.log(req.headers);
@@ -677,7 +747,7 @@ helpersInitialized.then(function(o) {
     auth(assignToP),
     need('conversation_id', getConversationIdFetchZid, assignToPCustom('zid')),
     want('tid', getInt, assignToP),
-    want('lang', getStringLimitLength(1,10), assignToP),
+    want('lang', getStringLimitLength(1, 10), assignToP),
     handle_GET_comments_translations);
 
   app.get("/api/v3/votes/me",
@@ -702,7 +772,7 @@ helpersInitialized.then(function(o) {
     resolve_pidThing('not_voted_by_pid', assignToP, "get:nextComment"),
     want('without', getArrayOfInt, assignToP),
     want('include_social', getBool, assignToP),
-    want('lang', getStringLimitLength(1,10), assignToP), // preferred language of nextComment
+    want('lang', getStringLimitLength(1, 10), assignToP), // preferred language of nextComment
     haltOnTimeout,
     handle_GET_nextComment);
 
@@ -715,7 +785,7 @@ helpersInitialized.then(function(o) {
     hangle_GET_testDatabase);
 
   app.get("/robots.txt",
-    function(req, res) {
+    function (req, res) {
       res.send("User-agent: *\n" +
         "Disallow: /api/");
     });
@@ -726,7 +796,7 @@ helpersInitialized.then(function(o) {
     want('ptptoiLimit', getInt, assignToP),
     want('conversation_id', getConversationIdFetchZid, assignToPCustom('zid')),
     want('conversation_id', getStringLimitLength(1, 1000), assignToP), // we actually need conversation_id to build a url
-    want('lang', getStringLimitLength(1,10), assignToP), // preferred language of nextComment
+    want('lang', getStringLimitLength(1, 10), assignToP), // preferred language of nextComment
 
     want('domain_whitelist_override_key', getStringLimitLength(1, 1000), assignToP),
     denyIfNotFromWhitelistedDomain, // this seems like the easiest place to enforce the domain whitelist. The index.html is cached on cloudflare, so that's not the right place.
@@ -744,7 +814,7 @@ helpersInitialized.then(function(o) {
     want('weight', getNumberInRange(-1, 1), assignToP, 0),
     resolve_pidThing('pid', assignToP, "post:votes"),
     want('xid', getStringLimitLength(1, 999), assignToP),
-    want('lang', getStringLimitLength(1,10), assignToP), // language of the next comment to be returned
+    want('lang', getStringLimitLength(1, 10), assignToP), // language of the next comment to be returned
     handle_POST_votes);
 
 
@@ -818,7 +888,7 @@ helpersInitialized.then(function(o) {
     need('tid', getInt, assignToP),
     need('include', getBool, assignToP),
     handle_POST_reportCommentSelections);
-    
+
 
 
   // use this to generate them
@@ -1044,6 +1114,28 @@ helpersInitialized.then(function(o) {
     auth(assignToP),
     handle_POST_reserve_conversation_id);
 
+  //MDV LDAP MIDDLEWARE ROUTING BEGIN
+
+  // Routes
+  app.post("/ldaplogin", (req, res, next) => {
+    console.log("MDV ldalogin started")
+    console.log("MDV ldalogin req",req)
+    passport.authenticate("ldap", (err, user, info) => {
+      if (err) throw err;
+      if (!user) res.send("No User Exists");
+      else {
+        req.logIn(user, (err) => {
+          if (err) throw err;
+          res.send("Successfully Authenticated");
+          console.log(req.user);
+        });
+      }
+    })(req, res, next);
+  });
+
+  //MDV LDAP MIDDLEWARE ROUTING END
+
+
   // TODO check to see if ptpt has answered necessary metadata questions.
   app.post('/api/v3/conversations',
     auth(assignToP),
@@ -1225,7 +1317,7 @@ helpersInitialized.then(function(o) {
     want('ui_lang', getStringLimitLength(1, 10), assignToP), // not persisted
     want('dwok', getStringLimitLength(1, 1000), assignToP), // not persisted
     want('xid', getStringLimitLength(1, 999), assignToP), // not persisted
-    want('subscribe_type', getStringLimitLength(1,9), assignToP), // not persisted
+    want('subscribe_type', getStringLimitLength(1, 9), assignToP), // not persisted
     want('x_name', getStringLimitLength(1, 746), assignToP),  // not persisted here, but later on POST vote/comment
     want('x_profile_image_url', getStringLimitLength(1, 3000), assignToP),  // not persisted here, but later on POST vote/comment
     want('x_email', getStringLimitLength(256), assignToP),  // not persisted here, but later on POST vote/comment
@@ -1284,16 +1376,16 @@ helpersInitialized.then(function(o) {
     handle_POST_waitinglist);
 
   app.post("/api/v3/metrics",
-      authOptional(assignToP),
-      need('types', getArrayOfInt, assignToP),
-      need('times', getArrayOfInt, assignToP),
-      need('durs', getArrayOfInt, assignToP),
-      need('clientTimestamp', getInt, assignToP),
-      handle_POST_metrics);
+    authOptional(assignToP),
+    need('types', getArrayOfInt, assignToP),
+    need('times', getArrayOfInt, assignToP),
+    need('durs', getArrayOfInt, assignToP),
+    need('clientTimestamp', getInt, assignToP),
+    handle_POST_metrics);
 
   function makeFetchIndexWithoutPreloadData() {
     let port = portForParticipationFiles;
-    return function(req, res) {
+    return function (req, res) {
       return fetchIndexWithoutPreloadData(req, res, port);
     };
   }
@@ -1361,7 +1453,7 @@ helpersInitialized.then(function(o) {
   app.get(/^\/company$/, fetchIndexForAdminPage);
 
   app.get(/^\/report\/r?[0-9][0-9A-Za-z]+(\/.*)?/, fetchIndexForReportPage);
-  
+
   app.get(/^\/thirdPartyCookieTestPt1\.html$/, fetchThirdPartyCookieTestPt1);
   app.get(/^\/thirdPartyCookieTestPt2\.html$/, fetchThirdPartyCookieTestPt2);
 
@@ -1405,27 +1497,27 @@ helpersInitialized.then(function(o) {
 
   // ends in slash? redirect to non-slash version
   app.get(/.*\//,
-  function(req, res) {
-    let pathAndQuery = req.originalUrl;
+    function (req, res) {
+      let pathAndQuery = req.originalUrl;
 
-    // remove slash at end
-    if (pathAndQuery.endsWith("/")) {
-      pathAndQuery = pathAndQuery.slice(0, pathAndQuery.length-1);
-    }
+      // remove slash at end
+      if (pathAndQuery.endsWith("/")) {
+        pathAndQuery = pathAndQuery.slice(0, pathAndQuery.length - 1);
+      }
 
-    // remove slashes before "?"
-    if (pathAndQuery.indexOf("?") >= 1) {
-      pathAndQuery = pathAndQuery.replace("/\?", "?");
-    }
+      // remove slashes before "?"
+      if (pathAndQuery.indexOf("?") >= 1) {
+        pathAndQuery = pathAndQuery.replace("/\?", "?");
+      }
 
-    let fullUrl = req.protocol + '://' + req.get('host') + pathAndQuery;
+      let fullUrl = req.protocol + '://' + req.get('host') + pathAndQuery;
 
-    if (pathAndQuery !== req.originalUrl) {
-      res.redirect(fullUrl);
-    } else {
-      proxy(req, res);
-    }
-  });
+      if (pathAndQuery !== req.originalUrl) {
+        res.redirect(fullUrl);
+      } else {
+        proxy(req, res);
+      }
+    });
 
 
   var missingFilesGet404 = false;
@@ -1443,7 +1535,7 @@ helpersInitialized.then(function(o) {
 
   winston.log("info", 'started on port ' + process.env.PORT);
 
-}, function(err) {
+}, function (err) {
   console.error("failed to init server");
   console.error(err);
 });

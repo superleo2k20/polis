@@ -1,3 +1,10 @@
 {
-  "note": "Just a workaround, as bundlewatch needs a package.json file to read."
+  "note": "Just a workaround, as bundlewatch needs a package.json file to read.",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "ldap-authentication": "^2.2.9",
+    "require": "^2.4.20"
+  }
 }

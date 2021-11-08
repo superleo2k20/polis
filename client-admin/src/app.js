@@ -31,6 +31,10 @@ import Integrate from './components/conversations-and-account/integrate'
 
 import InteriorHeader from './components/interior-header'
 
+// MDV INI
+import axios from 'axios';
+// MDV END
+
 const PrivateRoute = ({ component: Component, isLoading, authed, ...rest }) => {
   if (isLoading) {
     return null

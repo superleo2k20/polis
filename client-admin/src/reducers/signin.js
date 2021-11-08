@@ -6,17 +6,21 @@ const signin = (
   state = {
     loading: false,
     facebookLoading: false,
+    ldapLoading: false,
     signInSuccessful: false,
     error: false,
-    facebookError: false
+    facebookError: false,
+    ldapError: false
   },
   action
 ) => {
+  console.log("MDV SIGNING ACTION:",action.type)
   switch (action.type) {
     case types.FACEBOOK_SIGNIN_INITIATED:
       return Object.assign({}, state, {
         loading: false,
         facebookLoading: true,
+        ldapLoading: false,
         error: false,
         facebookError: false
       })
@@ -24,6 +28,7 @@ const signin = (
       return Object.assign({}, state, {
         loading: false,
         facebookLoading: false,
+        ldapLoading: false,
         error: false,
         facebookError: false
       })
@@ -31,14 +36,42 @@ const signin = (
       return Object.assign({}, state, {
         loading: false,
         facebookLoading: false,
+        ldapLoading: false,
         error: false,
         facebookError: action.errorCode
       })
+
+      case types.LDAP_SIGNIN_INITIATED:
+        return Object.assign({}, state, {
+          loading: false,
+          ldapLoading: true,
+          facebookLoading: false,
+          error: false,
+          ldapError: false
+        })
+      case types.LDAP_SIGNIN_SUCCESSFUL:
+        return Object.assign({}, state, {
+          loading: false,
+          ldapLoading: false,
+          facebookLoading: false,
+          error: false,
+          ldapError: false
+        })
+      case types.LDAP_SIGNIN_FAILED:
+        return Object.assign({}, state, {
+          loading: false,
+          ldapLoading: false,
+          facebookLoading: false,
+          error: false,
+          ldapError: action.errorCode
+        })
+  
     case types.SIGNIN_INITIATED:
       return Object.assign({}, state, {
         loading: false,
         pending: true,
         facebookLoading: false,
+        ldapLoading: false,
         error: false
       })
 
@@ -48,6 +81,7 @@ const signin = (
         pending: false,
         signInSuccessful: false,
         facebookLoading: false,
+        ldapLoading: false,
         error: false
       })
     case 'signin completed successfully':
@@ -56,6 +90,7 @@ const signin = (
         pending: false,
         signInSuccessful: true,
         facebookLoading: false,
+        ldapLoading: false,
         error: false
       })
     case types.SIGNIN_ERROR:
@@ -63,6 +98,7 @@ const signin = (
         loading: false,
         pending: false,
         facebookLoading: false,
+        ldapLoading: false,
         error: action.data
       })
     case types.CREATEUSER_INITIATED:
@@ -70,6 +106,7 @@ const signin = (
         loading: false,
         pending: true,
         facebookLoading: false,
+        ldapLoading: false,
         error: false
       })
     case types.CREATEUSER_ERROR:
@@ -77,6 +114,7 @@ const signin = (
         loading: false,
         pending: false,
         facebookLoading: false,
+        ldapLoading: false,
         error: action.data
       })
 

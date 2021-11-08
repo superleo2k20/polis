@@ -3,7 +3,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-import { doCreateUser, doFacebookSignin } from '../../actions'
+import { doCreateUser, doCreateLdapUser, doFacebookSignin } from '../../actions'
 import { Heading, Box, Text, Button, jsx } from 'theme-ui'
 
 import { Link } from 'react-router-dom'
@@ -30,6 +30,22 @@ class Createuser extends React.Component {
       dest = '/'
     }
     this.props.dispatch(doCreateUser(attrs, dest))
+  }
+
+  handleLdapLoginClicked(e) {
+    e.preventDefault()
+    const attrs = {
+      hname: this.hname.value,
+      email: this.email.value,
+      password: this.password.value,
+      gatekeeperTosPrivacy: true
+    }
+
+    let dest = this.getDest()
+    if (!dest.length) {
+      dest = '/'
+    }
+    this.props.dispatch(doCreateLdapUser(attrs, dest))
   }
 
   facebookButtonClicked() {
@@ -149,6 +165,13 @@ class Createuser extends React.Component {
             onClick={this.handleLoginClicked.bind(this)}>
             {this.props.pending ? 'Creating Account...' : 'Create Account'}
           </Button>
+          &nbsp;&nbsp;&nbsp;
+          <Button
+            sx={{ my: [3] }}
+            id="createLdapUserButton"
+            onClick={this.handleLdapLoginClicked.bind(this)}>
+            {this.props.pending ? 'Signup with Ldap Account...' : 'Signup with Ldap Account'}
+          </Button>
         </form>
         <Box sx={{ mb: [4] }}>
           Already have an account?{' '}
@@ -171,7 +194,9 @@ class Createuser extends React.Component {
           user, you will be registered and you agree to the pol.is terms and
           privacy policy
         </Text>
+
       </Box>
+
     )
   }
 

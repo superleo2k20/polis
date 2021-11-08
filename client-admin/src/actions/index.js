@@ -3,6 +3,20 @@
 import $ from 'jquery'
 import PolisNet from '../util/net'
 
+// MDV INI ADDED TO PACKAGE.JSON DEPENDENCIES
+import Axios from "axios";
+import f from '../strings/strings';
+const CONFIG = {
+  ldap: {
+    dn: 'dc=example,dc=com',
+    url: 'ldap://ldap.forumsys.com'
+  }
+}
+// const cookieSession = require('cookie-session')
+// import { app } from './ldaplogin'
+// const { authenticate } = require('ldap-authentication')
+// MDV END
+
 /* ======= Types ======= */
 export const REQUEST_USER = 'REQUEST_USER'
 export const RECEIVE_USER = 'RECEIVE_USER'
@@ -142,9 +156,14 @@ export const FACEBOOK_SIGNIN_INITIATED = 'FACEBOOK_SIGNIN_INITIATED'
 export const FACEBOOK_SIGNIN_SUCCESSFUL = 'FACEBOOK_SIGNIN_SUCCESSFUL'
 export const FACEBOOK_SIGNIN_FAILED = 'FACEBOOK_SIGNIN_FAILED'
 
+export const LDAP_SIGNIN_INITIATED = 'LDAP_SIGNIN_INITIATED'
+export const LDAP_SIGNIN_SUCCESSFUL = 'LDAP_SIGNIN_SUCCESSFUL'
+export const LDAP_SIGNIN_FAILED = 'LDAP_SIGNIN_FAILED'
+
 export const SUBMIT_CONTRIB = 'SUBMIT_CONTRIB'
 export const SUBMIT_CONTRIB_SUCCESS = 'SUBMIT_CONTRIB_SUCCESS'
 export const SUBMIT_CONTRIB_ERROR = 'SUBMIT_CONTRIB_ERROR'
+
 
 /* MATH */
 
@@ -261,6 +280,7 @@ const createUserPost = (attrs) => {
 
 export const doCreateUser = (attrs, dest) => {
   return (dispatch) => {
+
     dispatch(createUserInitiated())
     return createUserPost(attrs).then(
       () => {
@@ -272,6 +292,37 @@ export const doCreateUser = (attrs, dest) => {
       },
       (err) => dispatch(createUserError(err))
     )
+  }
+}
+
+
+//MDV
+// to reinit postgres db
+// docker-compose down --volumes    
+export const doCreateLdapUser = (attrs, dest) => {
+  console.log("MDV IN doCreateLdapUser, ATTRS",attrs)
+  return (dispatch) => {
+
+    console.log("MDV CALLING myLogin USER",attrs.user)
+    myloginCheck(dispatch, attrs,dest)
+    console.log("MDV RETURNED FROM CALLIG myLogin")
+
+    // if (ldapLogged) {
+
+    //   console.log("MDV doCreateLdapUser CREATING USER..")
+    //   dispatch(createUserInitiated())
+    //   return createUserPost(attrs).then(
+    //     () => {
+    //       setTimeout(() => {
+    //         // Force page to load so we can be sure the password is cleared from memory
+    //         // delay a bit so the cookie has time to set
+    //         window.location = dest || ''
+    //       }, 3000)
+    //     },
+    //     (err) => dispatch(createUserError(err))
+    //   )
+
+    // }
   }
 }
 
@@ -369,6 +420,13 @@ const facebookSigninInitiated = () => {
   }
 }
 
+const ldapSigninInitiated = () => {
+  console.log('MDV ldapSigninInitiated')
+  return {
+    type: LDAP_SIGNIN_INITIATED
+  }
+}
+
 // FIXME
 // eslint-disable-next-line no-unused-vars
 const facebookSigninSuccessful = () => {
@@ -377,9 +435,24 @@ const facebookSigninSuccessful = () => {
   }
 }
 
+const ldapSigninSuccessful = () => {
+  console.log('MDV ldapSigninSuccessful')
+  return {
+    type: LDAP_SIGNIN_SUCCESSFUL
+  }
+}
+
 const facebookSigninFailed = (errorCode) => {
   return {
     type: FACEBOOK_SIGNIN_FAILED,
+    errorCode: errorCode
+  }
+}
+
+const ldapSigninFailed = (errorCode) => {
+  console.log('MDV ldapSigninFailed')
+  return {
+    type: LDAP_SIGNIN_FAILED,
     errorCode: errorCode
   }
 }
@@ -585,10 +658,131 @@ const callFacebookLoginAPI = (dest, dispatch, optionalPassword) => {
   )
 }
 
+// declared outside the function so that the previous token is retained.
+let cancelToken
+
+
+const myloginCheck = (dispatch, attrs,dest) => {
+
+  //Save the cancel token for the current request
+  cancelToken = Axios.CancelToken.source()
+
+  console.log("MDV CALLING Axios.. ATTRS",attrs);
+
+  Axios({
+    method: "POST",
+    data: {
+      username: attrs.hname,
+      password: attrs.password,
+    },
+    withCredentials: true,
+    url: "http://localhost/ldaplogin",
+    timeout: 3000, // msecs
+    // cancelToken: cancelToken.token
+
+  }).then((respose) => {
+    console.log("MDV Axios got AUTHORIZED!", respose);
+
+    console.log("MDV myloginCheck CREATING USER..")
+    dispatch(createUserInitiated())
+    return createUserPost(attrs).then(
+      () => {
+        setTimeout(() => {
+          // Force page to load so we can be sure the password is cleared from memory
+          // delay a bit so the cookie has time to set
+          window.location = dest || ''
+        }, 3000)
+      },
+      (err) => dispatch(createUserError(err))
+    )
+  }).catch(error => {
+    // MDV Authorization Failed (Invalid Credentials)
+    console.log("MDV AUTORIZATION FAILED!");
+  });
+};
+
+
+const mylogin = (dispatch, attrs) => {
+
+  //Save the cancel token for the current request
+  cancelToken = Axios.CancelToken.source()
+
+  Axios({
+    method: "POST",
+    data: {
+      username: attrs.user,
+      password: attrs.password,
+    },
+    withCredentials: true,
+    url: "http://localhost/ldaplogin",
+    timeout: 3000, // msecs
+    // cancelToken: cancelToken.token
+
+  }).then((respose) => {
+    console.log("MDV AUTHORIZED!", respose);
+    dispatch(ldapSigninSuccessful())
+    // alert('MDV: LDAP LOGGED SUCCESSFUL')
+
+    const new_attrs = {
+      hname: attrs.user,
+      email: attrs.email,
+      password: attrs.password,
+      gatekeeperTosPrivacy: true
+    }
+
+    console.log("MDV new_attrs", new_attrs)
+
+    dispatch(createUserInitiated())
+
+    // MDV REGISTERED USERS https://localhost/api/v3/users
+    // createUserPost(new_attrs).then(
+    signinPost(new_attrs).then(
+
+      // callLapDLoginAPI(dest, dispatch, attrs)
+      setTimeout(() => {
+        // Force page to load so we can be sure the password is cleared from memory
+        // delay a bit so the cookie has time to set
+        dispatch({ type: 'signin completed successfully' })
+        window.location = '/'
+      }, 3000)
+    )
+
+    return true
+
+  }).catch(error => {
+    // MDV Authorization Failed (Invalid Credentials)
+    console.log("MDV AUTORIZATION FAILED!");
+    dispatch(ldapSigninFailed())
+    alert('MDV: LDAP LOGIN FAILED ')
+    return false
+
+  });
+};
+
+const callLapDLoginAPI = (dest, dispatch, attrs) => {
+
+  // alert('MDV: sto iniziando il login in LDAP :) !')
+
+  console.log('MDV.. in callLapDLoginAPI attrs:', attrs)
+
+  mylogin(dispatch, attrs)
+
+  console.log('MDV AFTER mylogin')
+
+}
+
 export const doFacebookSignin = (dest, optionalPassword) => {
   return (dispatch) => {
     dispatch(facebookSigninInitiated())
     return callFacebookLoginAPI(dest, dispatch, optionalPassword)
+  }
+}
+
+export const doLdapSignin = (dest, attrs) => {
+  // alert('MDV: in doLdapSignin..')
+  return (dispatch) => {
+    dispatch(ldapSigninInitiated())
+    return callLapDLoginAPI(dest, dispatch, attrs)
   }
 }
 
@@ -1015,9 +1209,9 @@ const fetchAllComments = (conversation_id) => {
   const includeSocial = ''
   return $.get(
     '/api/v3/comments?moderation=true&include_voting_patterns=false&' +
-      includeSocial +
-      'conversation_id=' +
-      conversation_id
+    includeSocial +
+    'conversation_id=' +
+    conversation_id
   )
 }
 
@@ -1056,9 +1250,9 @@ const mathFetchError = (err) => {
 const fetchMath = (conversation_id, math_tick) => {
   return $.get(
     '/api/v3/math/pca2?&math_tick=' +
-      math_tick +
-      '&conversation_id=' +
-      conversation_id
+    math_tick +
+    '&conversation_id=' +
+    conversation_id
   )
 }
 
@@ -1100,9 +1294,9 @@ const fetchUnmoderatedComments = (conversation_id) => {
   const includeSocial = ''
   return $.get(
     '/api/v3/comments?moderation=true&include_voting_patterns=false&' +
-      includeSocial +
-      'mod=0&conversation_id=' +
-      conversation_id
+    includeSocial +
+    'mod=0&conversation_id=' +
+    conversation_id
   )
 }
 
@@ -1143,9 +1337,9 @@ const fetchAcceptedComments = (conversation_id) => {
   const includeSocial = ''
   return $.get(
     '/api/v3/comments?moderation=true&include_voting_patterns=false&mod=1&' +
-      includeSocial +
-      'conversation_id=' +
-      conversation_id
+    includeSocial +
+    'conversation_id=' +
+    conversation_id
   )
 }
 
@@ -1186,9 +1380,9 @@ const fetchRejectedComments = (conversation_id) => {
   const includeSocial = ''
   return $.get(
     '/api/v3/comments?moderation=true&include_voting_patterns=false&' +
-      includeSocial +
-      'mod=-1&conversation_id=' +
-      conversation_id
+    includeSocial +
+    'mod=-1&conversation_id=' +
+    conversation_id
   )
 }
 
@@ -1656,8 +1850,8 @@ const conversationStatsFetchError = (err) => {
 const fetchConversationStats = (conversation_id, until) => {
   return $.get(
     '/api/v3/conversationStats?conversation_id=' +
-      conversation_id +
-      (until ? '&until=' + until : '')
+    conversation_id +
+    (until ? '&until=' + until : '')
   )
 }
 

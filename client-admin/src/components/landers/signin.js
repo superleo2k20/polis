@@ -3,7 +3,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-import { doSignin, doFacebookSignin } from '../../actions'
+import { doSignin, doFacebookSignin, doLdapSignin } from '../../actions'
 import { Link, Redirect } from 'react-router-dom'
 import { Heading, Box, Text, Button, jsx } from 'theme-ui'
 import StaticLayout from './lander-layout'
@@ -27,9 +27,9 @@ class SignIn extends React.Component {
     console.log(error, errorInfo)
   }
 
-  // getDest() {
-  //   return this.props.location.pathname.slice("/signin".length);
-  // }
+  getDest() {
+    return this.props.location.pathname.slice("/signin".length);
+  }
 
   handleLoginClicked(e) {
     e.preventDefault()
@@ -38,10 +38,10 @@ class SignIn extends React.Component {
       password: this.password.value
     }
 
-    // var dest = this.getDest();
-    // if (!dest.length) {
-    //   dest = "/";
-    // }
+    var dest = this.getDest();
+    if (!dest.length) {
+      dest = "/";
+    }
     this.props.dispatch(doSignin(attrs))
   }
 
@@ -51,6 +51,30 @@ class SignIn extends React.Component {
       dest = '/'
     }
     this.props.dispatch(doFacebookSignin(dest))
+  }
+
+  ldapButtonClicked(e) {
+    e.preventDefault()
+    const attrs = {
+      user: this.user.value,
+      password: this.password.value,
+      email: this.email.value,
+    }
+
+    let dest = this.getDest()
+    if (!dest.length) {
+      dest = '/'
+    }
+    this.props.dispatch(doLdapSignin(dest,attrs))
+  }
+
+  handleFacebookPasswordSubmit() {
+    let dest = this.getDest()
+    if (!dest.length) {
+      dest = '/'
+    }
+    const optionalPassword = this.facebook_password.value
+    this.props.dispatch(doFacebookSignin(dest, optionalPassword))
   }
 
   handleFacebookPasswordSubmit() {
@@ -130,6 +154,62 @@ class SignIn extends React.Component {
             If you click &apos;Sign in with Facebook&apos; and are not a pol.is
             user, you will be registered and you agree to the pol.is terms and
             privacy policy
+          </Text>
+        </Box>
+        <Box sx={{ my: 5 }}>
+        <input
+              sx={{
+                fontFamily: 'body',
+                fontSize: [2],
+                width: '35em',
+                borderRadius: 2,
+                padding: [2],
+                border: '1px solid',
+                borderColor: 'mediumGray'
+              }}
+              id="ldapUser"
+              ref={(c) => (this.user = c)}
+              placeholder="user"
+              type="user"
+            />
+            <input
+              sx={{
+                fontFamily: 'body',
+                fontSize: [2],
+                width: '35em',
+                borderRadius: 2,
+                padding: [2],
+                border: '1px solid',
+                borderColor: 'mediumGray'
+              }}
+              id="ldapPassword"
+              ref={(c) => (this.password = c)}
+              placeholder="password"
+              type="password"
+            />
+            <input
+              sx={{
+                fontFamily: 'body',
+                fontSize: [2],
+                width: '35em',
+                borderRadius: 2,
+                padding: [2],
+                border: '1px solid',
+                borderColor: 'mediumGray'
+              }}
+              id="ldapEmailInput"
+              ref={(c) => (this.email = c)}
+              placeholder="email"
+              type="email"
+            />
+          <Button
+            id="ldapSigninButton"
+            onClick={this.ldapButtonClicked.bind(this)}>
+            {this.props.ldapLoading ? 'LDAP Signing in' : 'LDAP Sign In'}
+          </Button>
+          <Text sx={{ my: 2 }}>
+            You have to be registereed to LDAP Directory Services
+            (user: gauss, password: password for Authentication test)
           </Text>
         </Box>
       </Box>
