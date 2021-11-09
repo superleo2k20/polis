@@ -14,7 +14,7 @@ const signin = (
   },
   action
 ) => {
-  console.log("MDV SIGNING ACTION:",action.type)
+  console.log("LDAPAUTH SIGNING ACTION:",action.type)
   switch (action.type) {
     case types.FACEBOOK_SIGNIN_INITIATED:
       return Object.assign({}, state, {

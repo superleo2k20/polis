@@ -1,4 +1,4 @@
-// MDV ADDED LDAP SERVER CONFIG DESCRIPTOR
+// LDAPAUTH ADDED LDAP SERVER CONFIG DESCRIPTOR
 module.exports = {
   ldap: {
     dn: 'dc=example,dc=com',

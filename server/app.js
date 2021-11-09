@@ -1,8 +1,5 @@
 // Copyright (C) 2012-present, The Authors. This program is free software: you can redistribute it and/or  modify it under the terms of the GNU Affero General Public License, version 3, as published by the Free Software Foundation. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 "use strict";
-
-// MDV
-
 const CONFIG = require('./config.js')
 const cookieSession = require('cookie-session')
 const bodyParser = require("body-parser");
@@ -24,8 +21,6 @@ const app = express();
 app.set('trust proxy', 'uniquelocal');
 
 console.log('init 1');
-
-// MDV PASSPORT INIT BEGIN
 
 passport.use('ldap', new CustomStrategy(
   async function (req, done) {
@@ -80,8 +75,6 @@ app.use(sessionMiddleWare)
 // passport requires these two
 app.use(passport.initialize())
 app.use(passport.session())
-
-// MDV PASSPORT INIT END
 
 var helpersInitialized = new Promise(function (resolve, reject) {
   resolve(server.initializePolisHelpers());
@@ -304,9 +297,7 @@ helpersInitialized.then(function (o) {
   ////////////////////////////////////////////
   ////////////////////////////////////////////
 
-  console.log('MDV APP MIDDLEWARE INITIALIZING')
-
-  app.use(function (req, res, next) {
+  app.use(function(req, res, next) {
     console.log("before");
     console.log(req.body);
     console.log(req.headers);
@@ -1114,30 +1105,24 @@ helpersInitialized.then(function (o) {
     auth(assignToP),
     handle_POST_reserve_conversation_id);
 
-  //MDV LDAP MIDDLEWARE ROUTING BEGIN
-
   // Routes
   app.post("/ldaplogin", (req, res, next) => {
-    console.log("MDV ldalogin started")
-    console.log("MDV ldalogin req",req)
+    console.log("LDAPAUTH ldalogin started")
+    console.log("LDAPAUTH ldalogin req",req)
     passport.authenticate("ldap", (err, user, info) => {
       if (err) throw err;
       if (!user) res.send("No User Exists");
       else {
         req.logIn(user, (err) => {
           if (err) throw err;
-          // res.send("Successfully Authenticated");
           res.send(user.mail);
           console.log(req.user);
-          console.log ("MDV LDAPLOGIN USER MAIL",JSON.stringify(user.mail, null, 4))
-          console.log ("MDV LDAPLOGIN USER CN",JSON.stringify(user.cn, null, 4))
+          console.log ("LDAPAUTH LDAPLOGIN USER MAIL",JSON.stringify(user.mail, null, 4))
+          console.log ("LDAPAUTH LDAPLOGIN USER CN",JSON.stringify(user.cn, null, 4))
         });
       }
     })(req, res, next);
   });
-
-  //MDV LDAP MIDDLEWARE ROUTING END
-
 
   // TODO check to see if ptpt has answered necessary metadata questions.
   app.post('/api/v3/conversations',

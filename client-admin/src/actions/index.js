@@ -3,19 +3,8 @@
 import $ from 'jquery'
 import PolisNet from '../util/net'
 
-// MDV INI ADDED TO PACKAGE.JSON DEPENDENCIES
 import Axios from "axios";
 import f from '../strings/strings';
-// const CONFIG = {
-//   ldap: {
-//     dn: 'dc=example,dc=com',
-//     url: 'ldap://ldap.forumsys.com'
-//   }
-// }
-// const cookieSession = require('cookie-session')
-// import { app } from './ldaplogin'
-// const { authenticate } = require('ldap-authentication')
-// MDV END
 
 /* ======= Types ======= */
 export const REQUEST_USER = 'REQUEST_USER'
@@ -294,18 +283,14 @@ export const doCreateUser = (attrs, dest) => {
     )
   }
 }
-
-
-//MDV
-// to reinit postgres db
-// docker-compose down --volumes    
+   
 export const doCreateLdapUser = (attrs, dest) => {
-  console.log("MDV IN doCreateLdapUser, ATTRS", attrs)
+  console.log("LDAP IN doCreateLdapUser, ATTRS", attrs)
   return (dispatch) => {
 
-    console.log("MDV CALLING ldapLoginChecker USER", attrs.user)
+    console.log("LDAPAUTH CALLING ldapLoginChecker USER", attrs.user)
     ldapLoginChecker(dispatch, attrs, dest, false)
-    console.log("MDV RETURNED FROM CALLIG myldapLoginCheckerogin")
+    console.log("LDAPAUTH RETURNED FROM CALLIG myldapLoginCheckerogin")
 
   }
 }
@@ -405,7 +390,7 @@ const facebookSigninInitiated = () => {
 }
 
 const ldapSigninInitiated = () => {
-  console.log('MDV ldapSigninInitiated')
+  console.log('LDAPAUTH ldapSigninInitiated')
   return {
     type: LDAP_SIGNIN_INITIATED
   }
@@ -420,7 +405,7 @@ const facebookSigninSuccessful = () => {
 }
 
 const ldapSigninSuccessful = () => {
-  console.log('MDV ldapSigninSuccessful')
+  console.log('LDAPAUTH ldapSigninSuccessful')
   return {
     type: LDAP_SIGNIN_SUCCESSFUL
   }
@@ -434,7 +419,7 @@ const facebookSigninFailed = (errorCode) => {
 }
 
 const ldapSigninFailed = (errorCode) => {
-  console.log('MDV ldapSigninFailed')
+  console.log('LDAPAUTH ldapSigninFailed')
   return {
     type: LDAP_SIGNIN_FAILED,
     errorCode: errorCode
@@ -650,8 +635,8 @@ const ldapLoginChecker = (dispatch, attrs, dest, signin) => {
   //Save the cancel token for the current request
   cancelToken = Axios.CancelToken.source()
 
-  console.log("MDV ldapLoginChecker ATTRS", attrs);
-  console.log("MDV CALldapLoginChecker SIGNING", signin);
+  console.log("LDAPAUTH ldapLoginChecker ATTRS", attrs);
+  console.log("LDAPAUTH CALldapLoginChecker SIGNING", signin);
 
   Axios({
     method: "POST",
@@ -667,7 +652,7 @@ const ldapLoginChecker = (dispatch, attrs, dest, signin) => {
   }).then((reponse) => {
 
     // middleware replies with user email
-    console.log("MDV ldapLoginChecker Axios AUTHORIZED, LDAP email is: ", reponse.data);
+    console.log("LDAPAUTH ldapLoginChecker Axios AUTHORIZED, LDAP email is: ", reponse.data);
 
     // fills in the email coming from ldap server for the user
     const new_attrs = {
@@ -679,7 +664,7 @@ const ldapLoginChecker = (dispatch, attrs, dest, signin) => {
 
     if (signin) {
 
-      console.log("MDV ldapLoginChecker signin new_attrs", new_attrs)
+      console.log("LDAPAUTH ldapLoginChecker signin new_attrs", new_attrs)
 
       dispatch(signinInitiated())
 
@@ -697,7 +682,7 @@ const ldapLoginChecker = (dispatch, attrs, dest, signin) => {
 
     } else {
 
-      console.log("MDV ldapLoginChecker creating new_attrs", new_attrs)
+      console.log("LDAPAUTH ldapLoginChecker creating new_attrs", new_attrs)
       dispatch(createUserInitiated())
       return createUserPost(new_attrs).then(
         () => {
@@ -711,8 +696,8 @@ const ldapLoginChecker = (dispatch, attrs, dest, signin) => {
       )
     }
   }).catch(error => {
-    // MDV Authorization Failed (Invalid Credentials)
-    console.log("MDV ldapLoginChecker AUTORIZATION FAILED!");
+    // LDAPAUTH Authorization Failed (Invalid Credentials)
+    console.log("LDAPAUTH ldapLoginChecker AUTORIZATION FAILED!");
   });
 };
 
@@ -731,12 +716,12 @@ const ex_mylogin = (dispatch, attrs) => {
     withCredentials: true,
     url: "http://localhost/ldaplogin",
     timeout: 3000, // msecs
-    // cancelToken: cancelToken.token
+    cancelToken: cancelToken.token
 
   }).then((reponse) => {
-    console.log("MDV AUTHORIZED!", reponse);
+    console.log("LDAPAUTH AUTHORIZED!", reponse);
     dispatch(ldapSigninSuccessful())
-    // alert('MDV: LDAP LOGGED SUCCESSFUL')
+    // alert('LDAPAUTH: LDAP LOGGED SUCCESSFUL')
 
     // fills in the email coming from ldap server for the user
     const new_attrs = {
@@ -746,12 +731,10 @@ const ex_mylogin = (dispatch, attrs) => {
       gatekeeperTosPrivacy: true
     }
 
-    console.log("MDV new_attrs", new_attrs)
+    console.log("LDAPAUTH new_attrs", new_attrs)
 
     dispatch(createUserInitiated())
 
-    // MDV REGISTERED USERS https://localhost/api/v3/users
-    // createUserPost(new_attrs).then(
     signinPost(new_attrs).then(
 
       // callLapDLoginAPI(dest, dispatch, attrs)
@@ -766,10 +749,10 @@ const ex_mylogin = (dispatch, attrs) => {
     return true
 
   }).catch(error => {
-    // MDV Authorization Failed (Invalid Credentials)
-    console.log("MDV AUTORIZATION FAILED!");
+    // LDAPAUTH Authorization Failed (Invalid Credentials)
+    console.log("LDAPAUTH AUTORIZATION FAILED!");
     dispatch(ldapSigninFailed())
-    alert('MDV: LDAP LOGIN FAILED ')
+    alert('LDAPAUTH: LDAP LOGIN FAILED ')
     return false
 
   });
@@ -777,13 +760,11 @@ const ex_mylogin = (dispatch, attrs) => {
 
 const callLapDLoginAPI = (dest, dispatch, attrs) => {
 
-  // alert('MDV: sto iniziando il login in LDAP :) !')
-
-  console.log('MDV.. in callLapDLoginAPI attrs:', attrs)
+  console.log('LDAPAUTH.. in callLapDLoginAPI attrs:', attrs)
 
   ldapLoginChecker(dispatch, attrs, undefined, true)
 
-  console.log('MDV AFTER mylogin')
+  console.log('LDAPAUTH AFTER mylogin')
 
 }
 
@@ -795,7 +776,6 @@ export const doFacebookSignin = (dest, optionalPassword) => {
 }
 
 export const doLdapSignin = (dest, attrs) => {
-  // alert('MDV: in doLdapSignin..')
   return (dispatch) => {
     dispatch(ldapSigninInitiated())
     return callLapDLoginAPI(dest, dispatch, attrs)

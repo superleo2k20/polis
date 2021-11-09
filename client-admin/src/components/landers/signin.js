@@ -38,10 +38,10 @@ class SignIn extends React.Component {
       password: this.password.value
     }
 
-    var dest = this.getDest();
-    if (!dest.length) {
-      dest = "/";
-    }
+    // var dest = this.getDest();
+    // if (!dest.length) {
+    //   dest = "/";
+    // }
     this.props.dispatch(doSignin(attrs))
   }
 

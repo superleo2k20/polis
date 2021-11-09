@@ -2446,7 +2446,7 @@ Feel free to reply to this email if you need help.`;
     req.p = req.p || {};
     let token = req.cookies[COOKIES.TOKEN];
 
-    console.log("MDV CALLED handle_POST_auth_deregister")
+    console.log("LDAPAUTH CALLED handle_POST_auth_deregister")
     // clear cookies regardless of auth status
     clearCookies(req, res);
 
@@ -5595,7 +5595,7 @@ Email verified! You can close this tab or hit the back button.
   } // end do_handle_POST_auth_facebook
 
   function handle_POST_auth_new(req, res) {
-    console.log("**** MDV handle_POST_auth_new")
+    console.log("**** LDAPAUTH handle_POST_auth_new")
     CreateUser.createUser(req, res);
   } // end /api/v3/auth/new
 
